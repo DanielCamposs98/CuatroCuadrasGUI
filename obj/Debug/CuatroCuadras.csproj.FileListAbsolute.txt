@@ -1,0 +1,11 @@
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\CuatroCuadras.exe.config
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\CuatroCuadras.exe
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\CuatroCuadras.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.csprojAssemblyReference.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.Form1.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.Properties.Resources.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.csproj.GenerateResource.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.exe
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.InicioSesionForm.resources
