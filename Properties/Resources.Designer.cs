@@ -63,29 +63,9 @@ namespace CuatroCuadras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close {
+        internal static System.Drawing.Bitmap CuatroCuadrasLogo {
             get {
-                object obj = ResourceManager.GetObject("close", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CuatroCuadras__1_ {
-            get {
-                object obj = ResourceManager.GetObject("CuatroCuadras (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap departure_platform_371218_1920__1_ {
-            get {
-                object obj = ResourceManager.GetObject("departure-platform-371218_1920 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("CuatroCuadrasLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

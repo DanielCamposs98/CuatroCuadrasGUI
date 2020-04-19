@@ -21,5 +21,12 @@ namespace CuatroCuadras
         {
             Application.Exit();
         }
+
+        private void lkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistroUsuarioForm ru = new RegistroUsuarioForm();
+            ru.Show();
+        }
+
     }
 }
