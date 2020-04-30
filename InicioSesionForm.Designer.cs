@@ -28,42 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesionForm));
-            this.panLogo = new System.Windows.Forms.Panel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.barra1 = new System.Windows.Forms.Label();
             this.barra2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lkFPass = new System.Windows.Forms.LinkLabel();
             this.panInicio = new System.Windows.Forms.Panel();
+            this.lblMensError = new System.Windows.Forms.Label();
             this.lkCrearCuenta = new System.Windows.Forms.LinkLabel();
-            this.pbClose = new System.Windows.Forms.PictureBox();
             this.btnIniciaSesion = new System.Windows.Forms.Button();
-            this.panLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.pbEye = new System.Windows.Forms.PictureBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panLogo
-            // 
-            this.panLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panLogo.Controls.Add(this.pbLogo);
-            this.panLogo.Location = new System.Drawing.Point(0, 0);
-            this.panLogo.Name = "panLogo";
-            this.panLogo.Size = new System.Drawing.Size(241, 255);
-            this.panLogo.TabIndex = 0;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(20, 62);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(200, 130);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 2;
-            this.pbLogo.TabStop = false;
             // 
             // barra1
             // 
@@ -93,18 +74,21 @@
             this.txtUsuario.Size = new System.Drawing.Size(388, 17);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtPass
             // 
             this.txtPass.BackColor = System.Drawing.SystemColors.Control;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(45, 119);
+            this.txtPass.Location = new System.Drawing.Point(45, 120);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(388, 17);
+            this.txtPass.Size = new System.Drawing.Size(357, 17);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "CONTRASEÑA";
-            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // lkFPass
             // 
@@ -121,6 +105,8 @@
             // 
             // panInicio
             // 
+            this.panInicio.Controls.Add(this.lblMensError);
+            this.panInicio.Controls.Add(this.pbEye);
             this.panInicio.Controls.Add(this.lkCrearCuenta);
             this.panInicio.Controls.Add(this.pbClose);
             this.panInicio.Controls.Add(this.btnIniciaSesion);
@@ -133,6 +119,18 @@
             this.panInicio.Name = "panInicio";
             this.panInicio.Size = new System.Drawing.Size(464, 254);
             this.panInicio.TabIndex = 6;
+            this.panInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panInicio_MouseDown);
+            // 
+            // lblMensError
+            // 
+            this.lblMensError.AutoSize = true;
+            this.lblMensError.Font = new System.Drawing.Font("Century Gothic", 10.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.lblMensError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblMensError.Location = new System.Drawing.Point(42, 205);
+            this.lblMensError.Name = "lblMensError";
+            this.lblMensError.Size = new System.Drawing.Size(0, 16);
+            this.lblMensError.TabIndex = 10;
+            this.lblMensError.Visible = false;
             // 
             // lkCrearCuenta
             // 
@@ -148,17 +146,6 @@
             this.lkCrearCuenta.Text = "Crear Cuenta";
             this.lkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkCrearCuenta_LinkClicked);
             // 
-            // pbClose
-            // 
-            this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(431, 12);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(20, 20);
-            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbClose.TabIndex = 7;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.Close_Click);
-            // 
             // btnIniciaSesion
             // 
             this.btnIniciaSesion.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -172,30 +159,65 @@
             this.btnIniciaSesion.TabIndex = 6;
             this.btnIniciaSesion.Text = "Iniciar Sesión";
             this.btnIniciaSesion.UseVisualStyleBackColor = true;
+            this.btnIniciaSesion.Click += new System.EventHandler(this.btnIniciaSesion_Click);
+            // 
+            // pbEye
+            // 
+            this.pbEye.Image = global::CuatroCuadras.Properties.Resources.Eye_icon;
+            this.pbEye.Location = new System.Drawing.Point(408, 117);
+            this.pbEye.Name = "pbEye";
+            this.pbEye.Size = new System.Drawing.Size(20, 20);
+            this.pbEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEye.TabIndex = 9;
+            this.pbEye.TabStop = false;
+            this.pbEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbEye_MouseDown);
+            this.pbEye.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbEye_MouseUp);
+            // 
+            // pbClose
+            // 
+            this.pbClose.Image = global::CuatroCuadras.Properties.Resources.Close_icon;
+            this.pbClose.Location = new System.Drawing.Point(431, 12);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(20, 20);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClose.TabIndex = 7;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.Close_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbLogo.Image = global::CuatroCuadras.Properties.Resources.CuatroCuadras_LogoV;
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(240, 256);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // InicioSesionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 250);
-            this.Controls.Add(this.panLogo);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.panInicio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InicioSesionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioSesionForm";
-            this.panLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panInicio.ResumeLayout(false);
             this.panInicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.Label barra1;
         private System.Windows.Forms.Label barra2;
         private System.Windows.Forms.TextBox txtUsuario;
@@ -204,7 +226,9 @@
         private System.Windows.Forms.Panel panInicio;
         private System.Windows.Forms.Button btnIniciaSesion;
         private System.Windows.Forms.PictureBox pbClose;
-        private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.LinkLabel lkCrearCuenta;
+        private System.Windows.Forms.PictureBox pbEye;
+        private System.Windows.Forms.Label lblMensError;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

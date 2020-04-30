@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -42,11 +46,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.barra1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(675, 325);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBox2.DisplayMember = "K";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "No Especificado"});
+            this.comboBox2.Location = new System.Drawing.Point(455, 236);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 19;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.textBox7.Location = new System.Drawing.Point(391, 236);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(57, 17);
+            this.textBox7.TabIndex = 18;
+            this.textBox7.Text = "CIUDAD";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBox1.DisplayMember = "K";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "No Especificado"});
+            this.comboBox1.Location = new System.Drawing.Point(74, 236);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.textBox6.Location = new System.Drawing.Point(29, 236);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(38, 17);
+            this.textBox6.TabIndex = 16;
+            this.textBox6.Text = "SEXO";
             // 
             // textBox5
             // 
@@ -187,6 +239,7 @@
             this.txtUsuario.Size = new System.Drawing.Size(237, 17);
             this.txtUsuario.TabIndex = 5;
             this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // barra1
             // 
@@ -209,32 +262,6 @@
             this.label1.Text = "Crear Cuenta";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBox6.Location = new System.Drawing.Point(29, 236);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(38, 17);
-            this.textBox6.TabIndex = 16;
-            this.textBox6.Text = "SEXO";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBox1.DisplayMember = "K";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "No Especificado"});
-            this.comboBox1.Location = new System.Drawing.Point(74, 236);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 17;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -243,32 +270,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(164, 45);
             this.panel2.TabIndex = 18;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBox2.DisplayMember = "K";
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "No Especificado"});
-            this.comboBox2.Location = new System.Drawing.Point(455, 236);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 19;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBox7.Location = new System.Drawing.Point(391, 236);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(57, 17);
-            this.textBox7.TabIndex = 18;
-            this.textBox7.Text = "CIUDAD";
             // 
             // RegistroUsuarioForm
             // 

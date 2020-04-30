@@ -1,0 +1,11 @@
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\bin\Debug\netstandard1.4\Persistencia.deps.json
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\bin\Debug\netstandard1.4\Persistencia.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\bin\Debug\netstandard1.4\Persistencia.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\bin\Debug\netstandard1.4\Soporte.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\bin\Debug\netstandard1.4\Soporte.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\obj\Debug\netstandard1.4\Persistencia.csprojAssemblyReference.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\obj\Debug\netstandard1.4\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\obj\Debug\netstandard1.4\Persistencia.AssemblyInfo.cs
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\obj\Debug\netstandard1.4\Persistencia.csproj.CopyComplete
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\obj\Debug\netstandard1.4\Persistencia.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Persistencia\obj\Debug\netstandard1.4\Persistencia.pdb

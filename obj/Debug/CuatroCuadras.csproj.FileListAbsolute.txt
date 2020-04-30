@@ -9,3 +9,5 @@ C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.ex
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.pdb
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.InicioSesionForm.resources
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.RegistroUsuarioForm.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.csproj.CopyComplete

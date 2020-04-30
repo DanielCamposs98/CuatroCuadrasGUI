@@ -41,5 +41,11 @@ namespace CuatroCuadras
         {
 
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }
