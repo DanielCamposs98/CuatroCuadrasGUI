@@ -22,3 +22,4 @@ C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\Presentacion.csp
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.exe
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.pdb
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasEmergentes.MBConfirmarLogout.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasEmergentes.MBErrorSeguridad.resources

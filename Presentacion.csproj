@@ -55,10 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuPrincipalForm.cs">
+    <Compile Include="VentanaPrincipal\MenuPrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipalForm.Designer.cs">
+    <Compile Include="VentanaPrincipal\MenuPrincipalForm.Designer.cs">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -87,7 +87,13 @@
     <Compile Include="VentanasEmergentes\MBConfirmarLogout.Designer.cs">
       <DependentUpon>MBConfirmarLogout.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MenuPrincipalForm.resx">
+    <Compile Include="VentanasEmergentes\MBErrorSeguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBErrorSeguridad.Designer.cs">
+      <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VentanaPrincipal\MenuPrincipalForm.resx">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas Iniciales\RegistroUsuarioForm.resx">
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBConfirmarLogout.resx">
       <DependentUpon>MBConfirmarLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBErrorSeguridad.resx">
+      <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Otros\packages.config" />
     <None Include="Properties\Settings.settings">

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Soporte.Cache;
+using Dominio;
+
 
 namespace CuatroCuadras
 {
@@ -16,6 +18,23 @@ namespace CuatroCuadras
         public MenuPrincipalForm()
         {
             InitializeComponent();
+        }
+
+        private void MenuPrincipalForm_Load(object sender, EventArgs e)
+        {
+            aplicarSeguridad();
+            string user = UsuarioCache.nombre + " " + UsuarioCache.apellidos;
+            this.lblBienvenida.Text = "Hola, " + user;
+        }
+
+        private void aplicarSeguridad()
+        {
+            var ModeloUsuario = new ModeloUsuario();
+            if (ModeloUsuario.inicioSeguro()== false)
+            {
+                VentanasEmergentes.MBErrorSeguridad aux = new VentanasEmergentes.MBErrorSeguridad();
+                aux.Show();
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -34,10 +53,9 @@ namespace CuatroCuadras
             ReleaseCaptureLibb.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void MenuPrincipalForm_Load(object sender, EventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            string user = UsuarioCache.nombre + " " + UsuarioCache.apellidos;
-            this.lblBienvenida.Text = "Hola, " + user;
+
         }
     }
 }
