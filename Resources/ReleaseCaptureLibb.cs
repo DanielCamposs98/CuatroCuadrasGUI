@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 
 namespace CuatroCuadras
 {
     public class ReleaseCaptureLibb
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        public extern static void ReleaseCapture();
+        public static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        public extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        public static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
     }
 }

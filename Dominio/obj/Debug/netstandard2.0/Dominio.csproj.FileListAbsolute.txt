@@ -1,0 +1,14 @@
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Dominio.deps.json
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Persistencia.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Soporte.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Persistencia.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\bin\Debug\netstandard2.0\Soporte.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.csprojAssemblyReference.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfo.cs
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CopyComplete
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Dominio\obj\Debug\netstandard2.0\Dominio.pdb

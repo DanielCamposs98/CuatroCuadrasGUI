@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CuatroCuadras</RootNamespace>
     <AssemblyName>CuatroCuadras</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -55,32 +56,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VentanaPrincipal\MenuPrincipalForm.cs">
+    <Compile Include="VentanaPrincipal\Cuatro Cuadras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaPrincipal\MenuPrincipalForm.Designer.cs">
-      <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    <Compile Include="VentanaPrincipal\Cuatro Cuadras.Designer.cs">
+      <DependentUpon>Cuatro Cuadras.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas Iniciales\RegistroUsuarioForm.cs">
+    <Compile Include="Ventanas Iniciales\Iniciando Sesión.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas Iniciales\RegistroUsuarioForm.Designer.cs">
-      <DependentUpon>RegistroUsuarioForm.cs</DependentUpon>
+    <Compile Include="Ventanas Iniciales\Iniciando Sesión.Designer.cs">
+      <DependentUpon>Iniciando Sesión.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas Iniciales\InicioSesionForm.cs">
+    <Compile Include="Ventanas Iniciales\Inicio CC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas Iniciales\InicioSesionForm.Designer.cs">
-      <DependentUpon>InicioSesionForm.cs</DependentUpon>
+    <Compile Include="Ventanas Iniciales\Inicio CC.Designer.cs">
+      <DependentUpon>Inicio CC.cs</DependentUpon>
     </Compile>
     <Compile Include="Otros\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\ReleaseCaptureLibb.cs" />
+    <Compile Include="VentanasCrearCuenta\RegistroDos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasCrearCuenta\RegistroDos.Designer.cs">
+      <DependentUpon>RegistroDos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasCrearCuenta\RegistroUno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasCrearCuenta\RegistroUno.Designer.cs">
+      <DependentUpon>RegistroUno.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasEmergentes\MBConfirmarLogout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,19 +106,37 @@
     <Compile Include="VentanasEmergentes\MBErrorSeguridad.Designer.cs">
       <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VentanaPrincipal\MenuPrincipalForm.resx">
-      <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    <Compile Include="VentanasEmergentes\MBRestauraContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBRestauraContrasena.Designer.cs">
+      <DependentUpon>MBRestauraContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBVerificaCorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBVerificaCorreo.Designer.cs">
+      <DependentUpon>MBVerificaCorreo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VentanaPrincipal\Cuatro Cuadras.resx">
+      <DependentUpon>Cuatro Cuadras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas Iniciales\RegistroUsuarioForm.resx">
-      <DependentUpon>RegistroUsuarioForm.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas Iniciales\Iniciando Sesión.resx">
+      <DependentUpon>Iniciando Sesión.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas Iniciales\InicioSesionForm.resx">
-      <DependentUpon>InicioSesionForm.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas Iniciales\Inicio CC.resx">
+      <DependentUpon>Inicio CC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasCrearCuenta\RegistroDos.resx">
+      <DependentUpon>RegistroDos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasCrearCuenta\RegistroUno.resx">
+      <DependentUpon>RegistroUno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBConfirmarLogout.resx">
       <DependentUpon>MBConfirmarLogout.cs</DependentUpon>
@@ -113,6 +144,13 @@
     <EmbeddedResource Include="VentanasEmergentes\MBErrorSeguridad.resx">
       <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBRestauraContrasena.resx">
+      <DependentUpon>MBRestauraContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBVerificaCorreo.resx">
+      <DependentUpon>MBVerificaCorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Otros\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,7 +176,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="VentanasComplementarias\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\CuatroCuadras_LogoH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_icon_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_icon_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_icon_White.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CuatroCuadras_LogoV.png" />
@@ -147,28 +197,10 @@
     <None Include="Resources\Close_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Close_icon_White.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logout_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logout_icon_White.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Menu_icon_White.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimize_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimize_icon_White.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Eye_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CuatroCuadras_Logo_V_Black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

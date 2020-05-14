@@ -5,3 +5,4 @@ C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Debug\netstand
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Debug\netstandard1.4\Soporte.AssemblyInfo.cs
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Debug\netstandard1.4\Soporte.dll
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Debug\netstandard1.4\Soporte.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Debug\netstandard1.4\Soporte.AssemblyInfoInputs.cache

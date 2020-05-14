@@ -83,6 +83,16 @@ namespace CuatroCuadras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CuatroCuadras_Logo_V_Black {
+            get {
+                object obj = ResourceManager.GetObject("CuatroCuadras_Logo_V_Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CuatroCuadras_LogoH {
             get {
                 object obj = ResourceManager.GetObject("CuatroCuadras_LogoH", resourceCulture);
@@ -113,49 +123,9 @@ namespace CuatroCuadras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logout_icon {
-            get {
-                object obj = ResourceManager.GetObject("Logout_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Logout_icon_White {
             get {
                 object obj = ResourceManager.GetObject("Logout_icon_White", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu_icon {
-            get {
-                object obj = ResourceManager.GetObject("menu_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Menu_icon_White {
-            get {
-                object obj = ResourceManager.GetObject("Menu_icon_White", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Minimize_icon {
-            get {
-                object obj = ResourceManager.GetObject("Minimize_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

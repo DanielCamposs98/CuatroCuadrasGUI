@@ -1,0 +1,9 @@
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\bin\Release\netstandard2.0\Soporte.deps.json
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\bin\Release\netstandard2.0\Soporte.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\bin\Release\netstandard2.0\Soporte.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Release\netstandard2.0\Soporte.csprojAssemblyReference.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Release\netstandard2.0\Soporte.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Release\netstandard2.0\Soporte.AssemblyInfoInputs.cache
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Release\netstandard2.0\Soporte.AssemblyInfo.cs
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Release\netstandard2.0\Soporte.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\Soporte\obj\Release\netstandard2.0\Soporte.pdb

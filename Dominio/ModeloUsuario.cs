@@ -1,5 +1,4 @@
 ﻿using Persistencia;
-using System;
 using Soporte.Cache;
 
 namespace Dominio
@@ -7,18 +6,25 @@ namespace Dominio
     public class ModeloUsuario
     {
 
-        ConsUser aux  = new ConsUser();
+        private ConsUser aux = new ConsUser();
+
+        public string recuperarContrasena(string solicitud)
+        {
+
+            return aux.RecuperarContrasena(solicitud);
+        }
+
 
         public bool LoginUsuario(string pass, string user)
         {
-                return aux.IniciaSesion(user, pass); 
+            return aux.IniciaSesion(user, pass);
         }
 
         public bool inicioSeguro()
         {
-            if(UsuarioCache.nickname != null || UsuarioCache.nickname != "")
+            if (UsuarioCache.nickname != null)
             {
-                if(aux.existeUsuario(UsuarioCache.nickname,UsuarioCache.contraseña) == true)
+                if (aux.existeUsuario(UsuarioCache.nickname, UsuarioCache.contraseña) == true)
                 {
                     return true;
                 }
@@ -32,5 +38,7 @@ namespace Dominio
                 return false;
             }
         }
+
+
     }
 }
