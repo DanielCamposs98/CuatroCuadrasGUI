@@ -168,6 +168,7 @@
             // pbLogo
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = global::CuatroCuadras.Properties.Resources.CuatroCuadras_LogoH;
             this.pbLogo.Location = new System.Drawing.Point(5, 2);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(174, 72);
@@ -177,6 +178,7 @@
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Image = global::CuatroCuadras.Properties.Resources.Minimize_icon_White;
             this.btnMinimizar.Location = new System.Drawing.Point(932, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(36, 32);
@@ -187,6 +189,7 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Image = global::CuatroCuadras.Properties.Resources.Close_icon_White;
             this.btnCerrar.Location = new System.Drawing.Point(969, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(32, 32);

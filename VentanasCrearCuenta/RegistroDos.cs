@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CuatroCuadras.VentanasCrearCuenta
 {
-    public partial class RegistroDos : Form
+    public partial class CreaCuentaV2 : Form
     {
-        public RegistroDos()
+        public CreaCuentaV2()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CuatroCuadras.Ventanas_Iniciales;
+﻿using CuatroCuadras.Ventanas_Iniciales;
 using Dominio;
-using Soporte.Cache;
+using System;
+using System.Windows.Forms;
 
 namespace CuatroCuadras
 {
@@ -29,81 +20,90 @@ namespace CuatroCuadras
 
         private void lkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //  RegistroUsuarioForm ru = new RegistroUsuarioForm();
-            // ru.Show();
+            Hide();
+            VentanasCrearCuenta.CreaCuentaV1 ru = new VentanasCrearCuenta.CreaCuentaV1();
+            ru.Show();
+            ru.FormClosed += devolverVentana;
+
         }
 
         #region ArrastrarVentana
         private void panInicio_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCaptureLibb.ReleaseCapture();
-            ReleaseCaptureLibb.SendMessage(this.Handle, 0x112, 0xf012, 0);
+            ReleaseCaptureLibb.SendMessage(Handle, 0x112, 0xf012, 0);
 
         }
 
         private void PanLogo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCaptureLibb.ReleaseCapture();
-            ReleaseCaptureLibb.SendMessage(this.Handle, 0x112, 0xf012, 0);
+            ReleaseCaptureLibb.SendMessage(Handle, 0x112, 0xf012, 0);
         }
         #endregion
+
+        #region ManejaUsuario
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            string aux = this.txtUsuario.Text;
+            string aux = txtUsuario.Text;
             if (aux.Equals("USUARIO"))
             {
-                this.txtUsuario.Text = "";
+                txtUsuario.Text = "";
             }
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            string aux = this.txtUsuario.Text;
+            string aux = txtUsuario.Text;
             if (aux.Equals(""))
             {
-                this.txtUsuario.Text = "USUARIO";
+                txtUsuario.Text = "USUARIO";
             }
         }
+        #endregion ManejaUsuario
 
+        #region manejaPass
         private void txtPass_Enter(object sender, EventArgs e)
         {
-            string aux = this.txtPass.Text;
+            string aux = txtPass.Text;
             if (aux.Equals("CONTRASEÑA"))
             {
-                this.txtPass.Text = "";
-                this.txtPass.UseSystemPasswordChar = true;
+                txtPass.Text = "";
+                txtPass.UseSystemPasswordChar = true;
             }
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
         {
-            string aux = this.txtPass.Text;
+            string aux = txtPass.Text;
             if (aux.Equals(""))
             {
-                this.txtPass.Text = "CONTRASEÑA";
-                this.txtPass.UseSystemPasswordChar = false;
+                txtPass.Text = "CONTRASEÑA";
+                txtPass.UseSystemPasswordChar = false;
             }
         }
 
         private void pbEye_MouseDown(object sender, MouseEventArgs e)
         {
-            this.txtPass.UseSystemPasswordChar = false;
+            txtPass.UseSystemPasswordChar = false;
         }
 
         private void pbEye_MouseUp(object sender, MouseEventArgs e)
         {
-            string aux = this.txtPass.Text;
+            string aux = txtPass.Text;
             if (aux.Equals("CONTRASEÑA"))
             {
-                this.txtPass.UseSystemPasswordChar = false;
+                txtPass.UseSystemPasswordChar = false;
             }
             else
             {
-                this.txtPass.UseSystemPasswordChar = true;
+                txtPass.UseSystemPasswordChar = true;
             }
 
         }
+        #endregion ManejaPass
 
+        #region ManejaBtnIniciaSesion
         private void btnIniciaSesion_Click(object sender, EventArgs e)
         {
             string user = txtUsuario.Text;
@@ -116,12 +116,12 @@ namespace CuatroCuadras
                     var sesionValida = usuario.LoginUsuario(pass, user);
                     if (sesionValida == true)
                     {
-                        this.Hide();
+                        Hide();
                         BienvenidaForm welcome = new BienvenidaForm();
                         welcome.ShowDialog();
                         CuatroCuadras mainMenu = new CuatroCuadras();
                         mainMenu.Show();
-                        mainMenu.FormClosed += cerrarSesion;
+                        mainMenu.FormClosed += devolverVentana;
 
                     }
                     else
@@ -139,12 +139,7 @@ namespace CuatroCuadras
                 mostrarError("Ingrese usuario");
             }
         }
-
-        private void mostrarError(string cad)
-        {
-            lblMensError.Text = cad;
-            lblMensError.Visible = true;
-        }
+        #endregion ManejaBtnInicioSesion
 
         private void lkFPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -152,13 +147,19 @@ namespace CuatroCuadras
             oc.ShowDialog();
         }
 
-        private void cerrarSesion(object sender, FormClosedEventArgs e)
+        private void mostrarError(string cad)
+        {
+            lblMensError.Text = cad;
+            lblMensError.Visible = true;
+        }
+
+        private void devolverVentana(object sender, FormClosedEventArgs e)
         {
             txtPass.Text = "CONTRASEÑA";
             txtPass.UseSystemPasswordChar = false;
             txtUsuario.Text = "USUARIO";
             lblMensError.Visible = false;
-            this.Show();
+            Show();
         }
 
     }

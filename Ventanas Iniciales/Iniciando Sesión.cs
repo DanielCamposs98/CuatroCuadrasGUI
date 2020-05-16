@@ -21,7 +21,7 @@ namespace CuatroCuadras.Ventanas_Iniciales
         {
             if (this.Opacity < 1)
             {
-                this.Opacity += 0.05;
+                this.Opacity += 0.03;
                 barraProgreso.Value += 5;
             }
             if (barraProgreso.Value == 100)

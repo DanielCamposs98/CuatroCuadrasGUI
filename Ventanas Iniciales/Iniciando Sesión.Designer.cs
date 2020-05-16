@@ -30,32 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BienvenidaForm));
-            this.pbCiudad = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.barraProgreso = new System.Windows.Forms.ProgressBar();
             this.lblIS = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).BeginInit();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.pbCiudad = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbCiudad
-            // 
-            this.pbCiudad.Location = new System.Drawing.Point(512, 2);
-            this.pbCiudad.Name = "pbCiudad";
-            this.pbCiudad.Size = new System.Drawing.Size(306, 402);
-            this.pbCiudad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCiudad.TabIndex = 0;
-            this.pbCiudad.TabStop = false;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Location = new System.Drawing.Point(71, 42);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(386, 146);
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
             // 
             // timer1
             // 
@@ -64,7 +47,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 50;
+            this.timer2.Interval = 150;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // barraProgreso
@@ -73,7 +56,7 @@
             this.barraProgreso.Location = new System.Drawing.Point(111, 272);
             this.barraProgreso.Name = "barraProgreso";
             this.barraProgreso.Size = new System.Drawing.Size(306, 23);
-            this.barraProgreso.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.barraProgreso.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.barraProgreso.TabIndex = 2;
             // 
             // lblIS
@@ -86,6 +69,25 @@
             this.lblIS.Size = new System.Drawing.Size(170, 22);
             this.lblIS.TabIndex = 3;
             this.lblIS.Text = "Iniciando Sesión...";
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::CuatroCuadras.Properties.Resources.CuatroCuadras_LogoH;
+            this.pbLogo.Location = new System.Drawing.Point(71, 42);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(386, 146);
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
+            // pbCiudad
+            // 
+            this.pbCiudad.Image = global::CuatroCuadras.Properties.Resources.Night_City;
+            this.pbCiudad.Location = new System.Drawing.Point(513, 2);
+            this.pbCiudad.Name = "pbCiudad";
+            this.pbCiudad.Size = new System.Drawing.Size(306, 402);
+            this.pbCiudad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCiudad.TabIndex = 0;
+            this.pbCiudad.TabStop = false;
             // 
             // BienvenidaForm
             // 
@@ -101,10 +103,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BienvenidaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BienvenidaForm";
             this.Load += new System.EventHandler(this.BienvenidaForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

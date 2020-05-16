@@ -1,15 +1,18 @@
 ﻿
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace Persistencia
 {
     public abstract class ConexionSQL
     {
-        public readonly string connectionString;
-        
+       public readonly string connectionString;
+
         public ConexionSQL()
         {
-            connectionString = "Data Source=DESKTOP-ODCAGRJ\\SQLEXPRESS;Initial Catalog=CuatroCuadras;Integrated Security=True";
+            string user = Soporte.Cache.ConServer.Usuario;
+            string contrasena = Soporte.Cache.ConServer.Contraseña;
+            connectionString = string.Format("Data Source=thecc.database.windows.net;Initial Catalog=CCBD;User ID={0};Password={1}", user, contrasena);
         }
 
         protected SqlConnection GetConnection()

@@ -10,6 +10,9 @@ namespace Persistencia
     public class ConsUser : ConexionSQL
     {
         SqlDataReader reader;
+
+       
+
         public bool IniciaSesion(string user, string pass)
         {
             using (var connection = GetConnection())

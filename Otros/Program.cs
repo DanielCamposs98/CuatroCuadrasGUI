@@ -11,7 +11,7 @@ namespace CuatroCuadras
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InicioSesionForm());
+            Application.Run(new VentanaConexionServ.ConexionServer());
         }
     }
 }

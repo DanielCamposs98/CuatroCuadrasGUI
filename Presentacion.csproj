@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VentanaConexionServ\ConexionServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaConexionServ\ConexionServer.Designer.cs">
+      <DependentUpon>ConexionServer.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\Cuatro Cuadras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="Otros\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\ReleaseCaptureLibb.cs" />
+    <Compile Include="VentanasComplementarias\VentanaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasComplementarias\VentanaInicio.Designer.cs">
+      <DependentUpon>VentanaInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasCrearCuenta\RegistroDos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="VentanasCrearCuenta\RegistroUno.Designer.cs">
       <DependentUpon>RegistroUno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBCancelarCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBCancelarCrearUsuario.Designer.cs">
+      <DependentUpon>MBCancelarCrearUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasEmergentes\MBConfirmarLogout.cs">
       <SubType>Form</SubType>
@@ -106,6 +124,12 @@
     <Compile Include="VentanasEmergentes\MBErrorSeguridad.Designer.cs">
       <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasEmergentes\MBNoConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBNoConnection.Designer.cs">
+      <DependentUpon>MBNoConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasEmergentes\MBRestauraContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +142,9 @@
     <Compile Include="VentanasEmergentes\MBVerificaCorreo.Designer.cs">
       <DependentUpon>MBVerificaCorreo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaConexionServ\ConexionServer.resx">
+      <DependentUpon>ConexionServer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\Cuatro Cuadras.resx">
       <DependentUpon>Cuatro Cuadras.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,11 +159,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasComplementarias\VentanaInicio.resx">
+      <DependentUpon>VentanaInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasCrearCuenta\RegistroDos.resx">
       <DependentUpon>RegistroDos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasCrearCuenta\RegistroUno.resx">
       <DependentUpon>RegistroUno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBCancelarCrearUsuario.resx">
+      <DependentUpon>MBCancelarCrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBConfirmarLogout.resx">
       <DependentUpon>MBConfirmarLogout.cs</DependentUpon>
@@ -144,13 +177,16 @@
     <EmbeddedResource Include="VentanasEmergentes\MBErrorSeguridad.resx">
       <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBNoConnection.resx">
+      <DependentUpon>MBNoConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBRestauraContrasena.resx">
       <DependentUpon>MBRestauraContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBVerificaCorreo.resx">
       <DependentUpon>MBVerificaCorreo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="Otros\app.config" />
     <None Include="Otros\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,9 +199,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Otros\App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="Dominio\Dominio.csproj">
       <Project>{a44ee138-0c72-4bb1-b74f-f38a568f4fcf}</Project>
       <Name>Dominio</Name>
@@ -176,7 +209,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="VentanasComplementarias\" />
+    <None Include="Resources\Night_City.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CuatroCuadras_LogoH.png" />
