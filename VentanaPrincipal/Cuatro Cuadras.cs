@@ -57,8 +57,13 @@ namespace CuatroCuadras
         {
             if (MessageBox.Show("Are you sure to log out?", "Warning",
               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
+              this.Close();
 
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaPerfil>(panelPrincipal);
         }
     }
     }

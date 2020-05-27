@@ -38,13 +38,33 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Maps, Version=0.32.0.0, Culture=neutral, PublicKeyToken=4aa992bb5d22d4ff, processorArchitecture=MSIL">
+      <HintPath>packages\gmaps-api-net.0.32.0\lib\net461\Google.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="LoremNET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lorem.NET.1.0.6\lib\net40\LoremNET.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SqlClient.4.8.1\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Device.Portable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3f6d3f5f65b761a0, processorArchitecture=MSIL">
+      <HintPath>packages\System.Device.Location.Portable.1.0.0\lib\System.Device.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Otros\UsoFormulario.cs" />
     <Compile Include="VentanaConexionServ\ConexionServer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +109,29 @@
     <Compile Include="Otros\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\ReleaseCaptureLibb.cs" />
+    <Compile Include="VentanasComplementarias\VentanaConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasComplementarias\VentanaConfig.Designer.cs">
+      <DependentUpon>VentanaConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasComplementarias\VentanaInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanasComplementarias\VentanaInicio.Designer.cs">
       <DependentUpon>VentanaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasComplementarias\VentanaMuestraLugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasComplementarias\VentanaMuestraLugar.Designer.cs">
+      <DependentUpon>VentanaMuestraLugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasComplementarias\VentanaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasComplementarias\VentanaPerfil.Designer.cs">
+      <DependentUpon>VentanaPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasCrearCuenta\RegistroDos.cs">
       <SubType>Form</SubType>
@@ -159,8 +198,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasComplementarias\VentanaConfig.resx">
+      <DependentUpon>VentanaConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasComplementarias\VentanaInicio.resx">
       <DependentUpon>VentanaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasComplementarias\VentanaMuestraLugar.resx">
+      <DependentUpon>VentanaMuestraLugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasComplementarias\VentanaPerfil.resx">
+      <DependentUpon>VentanaPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasCrearCuenta\RegistroDos.resx">
       <DependentUpon>RegistroDos.cs</DependentUpon>
@@ -188,6 +236,7 @@
     </EmbeddedResource>
     <None Include="Otros\app.config" />
     <None Include="Otros\packages.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -234,6 +283,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CuatroCuadras_Logo_V_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,13 +11,10 @@ namespace Persistencia
     {
         SqlDataReader reader;
 
-       
-
         public bool IniciaSesion(string user, string pass)
         {
             using (var connection = GetConnection())
             {
-
                 connection.Open();
                 using (var command = new SqlCommand())
                 {

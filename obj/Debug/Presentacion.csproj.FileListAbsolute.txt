@@ -30,3 +30,13 @@ C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\Presentacion.csp
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.exe
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.pdb
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\Google.Maps.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\GMap.NET.Core.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\System.Device.Portable.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaMuestraLugar.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\LoremNET.dll
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaConfig.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaPerfil.resources

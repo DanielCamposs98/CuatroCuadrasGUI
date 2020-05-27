@@ -1,7 +1,9 @@
 ﻿
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
-
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 namespace Persistencia
 {
     public abstract class ConexionSQL
@@ -9,6 +11,7 @@ namespace Persistencia
        public readonly string connectionString;
 
         public ConexionSQL()
+
         {
             string user = Soporte.Cache.ConServer.Usuario;
             string contrasena = Soporte.Cache.ConServer.Contraseña;
