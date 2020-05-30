@@ -208,7 +208,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InicioSesionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InicioSesionForm";
+            this.Text = "CC Inicio Sesión";
             this.panInicio.ResumeLayout(false);
             this.panInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEye)).EndInit();

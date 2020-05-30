@@ -6,8 +6,15 @@ namespace Dominio
     public class ModeloUsuario
     {
 
-        private ConsUser aux = new ConsUser();
+       private static ConsUser aux = new ConsUser();
 
+        
+
+        public static ConsUser GetConsUser()
+        {
+            return aux;
+          
+        }
         public string recuperarContrasena(string solicitud)
         {
 
@@ -24,7 +31,7 @@ namespace Dominio
         {
             if (UsuarioCache.nickname != null)
             {
-                if (aux.existeUsuario(UsuarioCache.nickname, UsuarioCache.contraseña) == true)
+                if (aux.existeUsuario(UsuarioCache.nickname) == true)
                 {
                     return true;
                 }

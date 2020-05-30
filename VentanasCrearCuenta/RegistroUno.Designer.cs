@@ -190,18 +190,19 @@
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Creación de Cuentas";
             // 
-            // CreaCuentaV2
+            // CreaCuentaV1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(365, 511);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panelAux);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CreaCuentaV2";
+            this.Name = "CreaCuentaV1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroUno";
             this.panelAux.ResumeLayout(false);
             this.panelAux.PerformLayout();

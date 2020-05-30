@@ -1,43 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿using Dominio;
 using GMap.NET;
+using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
-using System.Device.Location;
-using GMap.NET.MapProviders;
-using GMap.NET.Internals;
-using GMap.NET.Projections;
-using GMap.NET.ObjectModel;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace CuatroCuadras.VentanasComplementarias
 {
     public partial class VentanaMuestraLugar : Form
     {
-        GMarkerGoogle marker;
-        GMapOverlay markerOverlay;
-        double lat= 24.763375, longi= -107.699523;
-        public VentanaMuestraLugar()
+        private int id;
+        private GMapOverlay markerOverlay;
+        private GMarkerGoogle marker;
+
+        public VentanaMuestraLugar(int lugar)
         {
+            this.id = lugar;
             InitializeComponent();
         }
 
         private void VentanaMuestraLugar_Load(object sender, EventArgs e)
         {
-            muestraMapa( );
+            muestraMapa();
+            muestraDatos();
 
         }
 
         private void muestraMapa()
         {
-
+            double lat = obtenLatitud(id);
+            double longi = obtenLongitud(id);
 
             mapaLugar.DragButton = MouseButtons.Left;
             mapaLugar.CanDragMap = true;
@@ -54,33 +49,160 @@ namespace CuatroCuadras.VentanasComplementarias
             marker.ToolTipMode = MarkerTooltipMode.Always;
             marker.ToolTipText = string.Format("Ubicación: \n Latitud : {0} \n Longitud: {1}", lat, longi);
             mapaLugar.Overlays.Add(markerOverlay);
-
-            var addresses = GetAddress();
-       //     textBox1.Text = String.Join("", "", addresses.ToArray());
-
         }
-       
-        private List<String> GetAddress()
+
+        private void muestraDatos()
         {
-            List<Placemark> placemarks = null;
-
-            var statusCode= GMapProviders.GoogleMap.GetPlacemarks(new PointLatLng(lat,longi), out placemarks);
-            if(statusCode==GeoCoderStatusCode.G_GEO_SUCCESS && placemarks != null)
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
             {
-
-                List<String> addresses = new List<string>();
-                foreach(var placemark in placemarks)
+                SqlDataReader reader;
+                connection.Open();
+                using (var command = new SqlCommand())
                 {
-                    addresses.Add(placemark.Address);
+                    command.Connection = connection;
+                    command.CommandText = string.Format("SELECT Nombre,Latitud,Longitud,Descripcion,ID_Ciudad,ID_Categoria,ID_Etiqueta FROM LUGAR WHERE ID_Lugar={0}",id);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            lblNombreLugar.Text = reader.GetValue(0).ToString();
+                            lblLatitud.Text = reader.GetValue(1).ToString();
+                            lblLongitud.Text = reader.GetValue(2).ToString();
+                            txtDescripcion.Text = reader.GetValue(3).ToString();
+                            lblCiudad.Text = obtenNombreCiudad(id);
+                            lblCategoria.Text = obtenCategoria(id);
+                            lblEtiqueta.Text = obtenEtiqueta(id);
+                        }
+                    }
                 }
-                return addresses;
             }
-            return null;
-
         }
-        
-       
 
+        private string obtenNombreCiudad(int id)
+        {
+            string ciudad = "";
+            SqlDataReader reader;
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    //Obtener nombre ciudad
+                    command.Connection = connection;
+                    command.CommandText = String.Format("SELECT C.ciudad FROM CIUDAD WHERE ID_Ciudad={0}",id);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ciudad = reader.GetValue(0).ToString();
+                    }
+                }
+                return ciudad;
+            }
+        }
+
+        private string obtenEtiqueta(int id)
+        {
+            string etiqueta = "";
+            SqlDataReader reader;
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    //Obtener nombre ciudad
+                    command.Connection = connection;
+                    command.CommandText = String.Format("SELECT Nombre_eti FROM ETIQUETA WHERE ID_Etiqueta={0}",id);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        etiqueta = reader.GetValue(0).ToString();
+                    }
+                }
+                return etiqueta;
+
+            }
+        }
+
+        private string obtenCategoria(int id)
+        {
+            string categoria = "";
+            SqlDataReader reader;
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    //Obtener nombre ciudad
+                    command.Connection = connection;
+                    command.CommandText = String.Format("SELECT Descripcion FROM Categoria WHERE ID_Categoria={0}", id);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                       categoria = reader.GetValue(0).ToString();
+                    }
+                }
+                return categoria;
+
+            }
+        }
+
+        private double obtenLatitud(int id)
+        {
+            SqlDataReader reader;
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+            {
+                double lat = 0;
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    //Obtener nombre ciudad
+                    command.Connection = connection;
+                    command.CommandText = String.Format("SELECT Latitud FROM LUGAR WHERE ID_Lugar={0}", id);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        lat = Convert.ToDouble(reader.GetValue(0));
+                    }
+                }
+                return lat;
+
+            }
+        }
+
+        private double obtenLongitud(int id)
+        { 
+            SqlDataReader reader;
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+            {
+                double longi = 0;
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    //Obtener nombre ciudad
+                    command.Connection = connection;
+                    command.CommandText = String.Format("SELECT Latitud FROM LUGAR WHERE ID_Lugar={0}", id);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        longi = Convert.ToDouble(reader.GetValue(0));
+                    }
+                }
+                return longi;
+
+            }
+        }
 
     }
 }

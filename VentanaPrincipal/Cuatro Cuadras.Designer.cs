@@ -38,15 +38,14 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.bfSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bfSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,6 +82,7 @@
             this.button1.Text = "CONFIGURACIÓN";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVisitas
             // 
@@ -98,6 +98,7 @@
             this.btnVisitas.TabIndex = 13;
             this.btnVisitas.Text = "VISITAS";
             this.btnVisitas.UseVisualStyleBackColor = false;
+            this.btnVisitas.Click += new System.EventHandler(this.btnVisitas_Click);
             // 
             // btnLogout
             // 
@@ -129,6 +130,7 @@
             this.btnAmigos.TabIndex = 11;
             this.btnAmigos.Text = "AMIGOS";
             this.btnAmigos.UseVisualStyleBackColor = false;
+            this.btnAmigos.Click += new System.EventHandler(this.btnAmigos_Click);
             // 
             // btnPerfil
             // 
@@ -160,6 +162,7 @@
             this.btnInicio.TabIndex = 9;
             this.btnInicio.Text = "INICIO";
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // bfSeparator2
             // 
@@ -185,10 +188,21 @@
             this.bfSeparator1.Transparency = 255;
             this.bfSeparator1.Vertical = false;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = global::CuatroCuadras.Properties.Resources.CuatroCuadras_LogoH;
+            this.pbLogo.Location = new System.Drawing.Point(5, 2);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(174, 72);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
+            // 
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.panelPrincipal.Location = new System.Drawing.Point(194, 32);
+            this.panelPrincipal.Location = new System.Drawing.Point(194, 39);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(807, 518);
             this.panelPrincipal.TabIndex = 5;
@@ -215,44 +229,12 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogo.Image = global::CuatroCuadras.Properties.Resources.CuatroCuadras_LogoH;
-            this.pbLogo.Location = new System.Drawing.Point(5, 2);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(174, 72);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 1;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(742, 7);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(175, 21);
-            this.bunifuMaterialTextbox1.TabIndex = 6;
-            this.bunifuMaterialTextbox1.Text = "Buscar...";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // CuatroCuadras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.btnCerrar);
@@ -261,13 +243,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CuatroCuadras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Tag = "HOLA";
-            this.Text = "MenuPrincipalForm";
+            this.Tag = "";
+            this.Text = "Cuatro Cuadras";
             this.Load += new System.EventHandler(this.MenuPrincipalForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,6 +269,5 @@
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button button1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
     }
 }

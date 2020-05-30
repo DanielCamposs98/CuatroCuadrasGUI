@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
+
 namespace Persistencia
 {
     public abstract class ConexionSQL
@@ -15,10 +16,11 @@ namespace Persistencia
         {
             string user = Soporte.Cache.ConServer.Usuario;
             string contrasena = Soporte.Cache.ConServer.Contraseña;
-            connectionString = string.Format("Data Source=thecc.database.windows.net;Initial Catalog=CCBD;User ID={0};Password={1}", user, contrasena);
+            connectionString = string.Format("Server=tcp:thecc.database.windows.net,1433;Initial Catalog=CuatroCuadras;Persist Security Info=False;User ID={0};Password={1};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;", user, contrasena);
+
         }
 
-        protected SqlConnection GetConnection()
+        public SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);
         }

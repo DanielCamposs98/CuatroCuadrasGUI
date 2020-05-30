@@ -23,6 +23,7 @@ namespace CuatroCuadras
         private void MenuPrincipalForm_Load(object sender, EventArgs e)
         {
             aplicarSeguridad();
+            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaInicio>(panelPrincipal);
         }
 
         private void aplicarSeguridad()
@@ -55,15 +56,38 @@ namespace CuatroCuadras
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to log out?", "Warning",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-              this.Close();
-
+            new VentanasEmergentes.MBConfirmarLogout().ShowDialog();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
+            panelPrincipal.Controls.Clear();
             Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaPerfil>(panelPrincipal);
+        }
+
+        private void btnAmigos_Click(object sender, EventArgs e)
+        {
+            panelPrincipal.Controls.Clear();
+            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaAmigos>(panelPrincipal);
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Clear();
+            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaInicio>(panelPrincipal);
+        }
+
+        private void btnVisitas_Click(object sender, EventArgs e)
+        {
+            panelPrincipal.Controls.Clear();
+            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaLugares>(panelPrincipal);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelPrincipal.Controls.Clear();
+            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaConfig>(panelPrincipal);
         }
     }
     }

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CuatroCuadras.VentanasEmergentes
+namespace CuatroCuadras.VentanasComplementarias
 {
-    public partial class MBNoConnection : Form
+    public partial class VentanaLugares : Form
     {
-        public MBNoConnection()
+        public VentanaLugares()
         {
             InitializeComponent();
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

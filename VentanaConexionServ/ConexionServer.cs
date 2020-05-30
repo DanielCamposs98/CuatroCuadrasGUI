@@ -27,7 +27,7 @@ namespace CuatroCuadras.VentanaConexionServ
 
             string connectionString;
             SqlConnection cnn;
-            connectionString = String.Format("Data Source=thecc.database.windows.net;Initial Catalog=CCBD;User ID={0};Password={1};", user, contrasena);
+            connectionString = String.Format("Data Source=thecc.database.windows.net;Initial Catalog=CuatroCuadras;User ID={0};Password={1};", user, contrasena);
 
            
             try
@@ -55,8 +55,7 @@ namespace CuatroCuadras.VentanaConexionServ
             }
             else
             {
-                this.Hide();
-                new VentanasEmergentes.MBNoConnection().Show();
+                new VentanasEmergentes.MBNoConnection().ShowDialog();
             }
         }
     }

@@ -40,3 +40,6 @@ C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.Ve
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\bin\Debug\LoremNET.dll
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaConfig.resources
 C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaPerfil.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaAmigos.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaCheckIn.resources
+C:\Users\Daniel Campos\Documents\GitHub\CuatroCuadras\obj\Debug\CuatroCuadras.VentanasComplementarias.VentanaLugares.resources

@@ -21,5 +21,15 @@ namespace CuatroCuadras.VentanasEmergentes
         {
             this.Dispose();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

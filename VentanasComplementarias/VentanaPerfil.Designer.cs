@@ -28,32 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblNickname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblSexo = new System.Windows.Forms.Label();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblCiudad = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.dgVisitas = new System.Windows.Forms.DataGridView();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgLogros = new System.Windows.Forms.DataGridView();
+            this.Logro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVisitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLogros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNickname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(234, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DanielCM98";
+            this.lblNickname.AutoSize = true;
+            this.lblNickname.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNickname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNickname.Location = new System.Drawing.Point(234, 52);
+            this.lblNickname.Name = "lblNickname";
+            this.lblNickname.Size = new System.Drawing.Size(0, 39);
+            this.lblNickname.TabIndex = 1;
             // 
             // label2
             // 
@@ -63,88 +71,126 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;
             // 
-            // label3
+            // lblSexo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(237, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Sexo: Masculino";
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSexo.Location = new System.Drawing.Point(237, 137);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(0, 19);
+            this.lblSexo.TabIndex = 3;
             // 
-            // label4
+            // lblEdad
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(237, 174);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Edad: 21";
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEdad.Location = new System.Drawing.Point(237, 174);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(0, 19);
+            this.lblEdad.TabIndex = 4;
             // 
-            // label5
+            // lblCorreo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(503, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(254, 19);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Correo: Danielcampossm98@gmail.com";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCorreo.Location = new System.Drawing.Point(482, 103);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(0, 19);
+            this.lblCorreo.TabIndex = 5;
             // 
-            // label6
+            // lblCiudad
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(503, 137);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ciudad : Culiacán.";
+            this.lblCiudad.AutoSize = true;
+            this.lblCiudad.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCiudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCiudad.Location = new System.Drawing.Point(482, 137);
+            this.lblCiudad.Name = "lblCiudad";
+            this.lblCiudad.Size = new System.Drawing.Size(0, 19);
+            this.lblCiudad.TabIndex = 6;
             // 
-            // label7
+            // lblNombre
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(237, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Daniel Campos Medina";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNombre.Location = new System.Drawing.Point(237, 101);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(0, 19);
+            this.lblNombre.TabIndex = 7;
             // 
-            // dataGridView1
+            // dgVisitas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(421, 248);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(351, 231);
-            this.dataGridView1.TabIndex = 8;
+            this.dgVisitas.AllowUserToAddRows = false;
+            this.dgVisitas.AllowUserToDeleteRows = false;
+            this.dgVisitas.AllowUserToResizeColumns = false;
+            this.dgVisitas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgVisitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgVisitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgVisitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgVisitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
+            this.dgVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgVisitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Lugar,
+            this.Valoracion,
+            this.Comentario,
+            this.Fecha});
+            this.dgVisitas.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgVisitas.Location = new System.Drawing.Point(350, 259);
+            this.dgVisitas.MultiSelect = false;
+            this.dgVisitas.Name = "dgVisitas";
+            this.dgVisitas.ReadOnly = true;
+            this.dgVisitas.RowHeadersVisible = false;
+            this.dgVisitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgVisitas.Size = new System.Drawing.Size(430, 231);
+            this.dgVisitas.TabIndex = 8;
             // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(398, 229);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(333, 240);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(10, 268);
             this.bunifuSeparator1.TabIndex = 9;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
             // 
-            // dataGridView2
+            // dgLogros
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(49, 248);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(339, 231);
-            this.dataGridView2.TabIndex = 10;
+            this.dgLogros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
+            this.dgLogros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Logro,
+            this.obtencion});
+            this.dgLogros.Location = new System.Drawing.Point(49, 259);
+            this.dgLogros.MultiSelect = false;
+            this.dgLogros.Name = "dgLogros";
+            this.dgLogros.ReadOnly = true;
+            this.dgLogros.RowHeadersVisible = false;
+            this.dgLogros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLogros.Size = new System.Drawing.Size(278, 231);
+            this.dgLogros.TabIndex = 10;
+            // 
+            // Logro
+            // 
+            this.Logro.HeaderText = "Logro";
+            this.Logro.Name = "Logro";
+            this.Logro.ReadOnly = true;
+            this.Logro.Width = 110;
+            // 
+            // obtencion
+            // 
+            this.obtencion.HeaderText = "Fecha Obtención";
+            this.obtencion.Name = "obtencion";
+            this.obtencion.ReadOnly = true;
+            this.obtencion.Width = 165;
             // 
             // pictureBox1
             // 
@@ -156,28 +202,84 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(56, 226);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Logros Obtenidos";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(349, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 19);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Check-ins Realizados";
+            // 
+            // Lugar
+            // 
+            this.Lugar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Lugar.HeaderText = "Lugar";
+            this.Lugar.Name = "Lugar";
+            this.Lugar.ReadOnly = true;
+            // 
+            // Valoracion
+            // 
+            this.Valoracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Valoracion.HeaderText = "Valoración";
+            this.Valoracion.Name = "Valoracion";
+            this.Valoracion.ReadOnly = true;
+            this.Valoracion.Width = 70;
+            // 
+            // Comentario
+            // 
+            this.Comentario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Comentario.HeaderText = "Comentario";
+            this.Comentario.Name = "Comentario";
+            this.Comentario.ReadOnly = true;
+            this.Comentario.Width = 130;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 120;
+            // 
             // VentanaPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(807, 518);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgLogros);
+            this.Controls.Add(this.bunifuSeparator1);
+            this.Controls.Add(this.dgVisitas);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblCiudad);
+            this.Controls.Add(this.lblCorreo);
+            this.Controls.Add(this.lblEdad);
+            this.Controls.Add(this.lblSexo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblNickname);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VentanaPerfil";
             this.Text = "VentanaPerfil";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Load += new System.EventHandler(this.VentanaPerfil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgVisitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLogros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,15 +289,23 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNickname;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblCiudad;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridView dgVisitas;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgLogros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Logro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn obtencion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lugar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valoracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }

@@ -58,14 +58,14 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtContrasena.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txtContrasena.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtContrasena.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtContrasena.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txtContrasena.BorderThickness = 1;
             this.txtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtContrasena.isPassword = false;
+            this.txtContrasena.isPassword = true;
             this.txtContrasena.Location = new System.Drawing.Point(141, 114);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
@@ -75,9 +75,9 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BorderColorFocused = System.Drawing.Color.MidnightBlue;
+            this.txtUsuario.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txtUsuario.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUsuario.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtUsuario.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txtUsuario.BorderThickness = 1;
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
@@ -137,7 +137,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(313, 162);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Normalcolor = System.Drawing.SystemColors.ControlDark;
-            this.btnConfirmar.OnHovercolor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnConfirmar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnConfirmar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnConfirmar.selected = false;
             this.btnConfirmar.Size = new System.Drawing.Size(120, 32);
@@ -191,8 +191,10 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConexionServer";
-            this.Text = "ConexionServer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Conexión Azure";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

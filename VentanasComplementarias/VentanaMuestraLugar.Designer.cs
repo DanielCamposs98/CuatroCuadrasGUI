@@ -31,31 +31,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombreLugar = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.staticLat = new System.Windows.Forms.Label();
+            this.staticLong = new System.Windows.Forms.Label();
+            this.staticCat = new System.Windows.Forms.Label();
+            this.staticEtiq = new System.Windows.Forms.Label();
+            this.staticCiudad = new System.Windows.Forms.Label();
+            this.staticDesc = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.sepH2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.sepH1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.dgVisitas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuRating1 = new Bunifu.Framework.UI.BunifuRating();
-            this.label8 = new System.Windows.Forms.Label();
+            this.ratLugar = new Bunifu.Framework.UI.BunifuRating();
+            this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblLatitud = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.lblLongitud = new System.Windows.Forms.Label();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.lblEtiqueta = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.mapaLugar = new GMap.NET.WindowsForms.GMapControl();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVisitas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreLugar
@@ -66,138 +63,137 @@
             this.lblNombreLugar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblNombreLugar.Location = new System.Drawing.Point(34, 32);
             this.lblNombreLugar.Name = "lblNombreLugar";
-            this.lblNombreLugar.Size = new System.Drawing.Size(326, 37);
+            this.lblNombreLugar.Size = new System.Drawing.Size(0, 34);
             this.lblNombreLugar.TabIndex = 0;
-            this.lblNombreLugar.Text = "Rosa Morada Restaurante\r\n";
             this.lblNombreLugar.UseCompatibleTextRendering = true;
             // 
-            // label2
+            // staticLat
             // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(35, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Lat.";
-            this.label2.UseCompatibleTextRendering = true;
+            this.staticLat.AutoSize = true;
+            this.staticLat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staticLat.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticLat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staticLat.Location = new System.Drawing.Point(35, 81);
+            this.staticLat.Name = "staticLat";
+            this.staticLat.Size = new System.Drawing.Size(20, 17);
+            this.staticLat.TabIndex = 2;
+            this.staticLat.Text = "Lat.";
+            this.staticLat.UseCompatibleTextRendering = true;
             // 
-            // label3
+            // staticLong
             // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(173, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Long.";
-            this.label3.UseCompatibleTextRendering = true;
+            this.staticLong.AutoSize = true;
+            this.staticLong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staticLong.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticLong.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staticLong.Location = new System.Drawing.Point(173, 81);
+            this.staticLong.Name = "staticLong";
+            this.staticLong.Size = new System.Drawing.Size(29, 17);
+            this.staticLong.TabIndex = 3;
+            this.staticLong.Text = "Long.";
+            this.staticLong.UseCompatibleTextRendering = true;
             // 
-            // label4
+            // staticCat
             // 
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(35, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Categoria:";
-            this.label4.UseCompatibleTextRendering = true;
+            this.staticCat.AutoSize = true;
+            this.staticCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staticCat.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticCat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staticCat.Location = new System.Drawing.Point(35, 114);
+            this.staticCat.Name = "staticCat";
+            this.staticCat.Size = new System.Drawing.Size(59, 19);
+            this.staticCat.TabIndex = 4;
+            this.staticCat.Text = "Categoria:";
+            this.staticCat.UseCompatibleTextRendering = true;
             // 
-            // label5
+            // staticEtiq
             // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(331, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 19);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Etiqueta:";
-            this.label5.UseCompatibleTextRendering = true;
+            this.staticEtiq.AutoSize = true;
+            this.staticEtiq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staticEtiq.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticEtiq.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staticEtiq.Location = new System.Drawing.Point(331, 114);
+            this.staticEtiq.Name = "staticEtiq";
+            this.staticEtiq.Size = new System.Drawing.Size(52, 19);
+            this.staticEtiq.TabIndex = 5;
+            this.staticEtiq.Text = "Etiqueta:";
+            this.staticEtiq.UseCompatibleTextRendering = true;
             // 
-            // label6
+            // staticCiudad
             // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(331, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ciudad:";
-            this.label6.UseCompatibleTextRendering = true;
+            this.staticCiudad.AutoSize = true;
+            this.staticCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staticCiudad.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticCiudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staticCiudad.Location = new System.Drawing.Point(331, 81);
+            this.staticCiudad.Name = "staticCiudad";
+            this.staticCiudad.Size = new System.Drawing.Size(45, 19);
+            this.staticCiudad.TabIndex = 6;
+            this.staticCiudad.Text = "Ciudad:";
+            this.staticCiudad.UseCompatibleTextRendering = true;
             // 
-            // label7
+            // staticDesc
             // 
-            this.label7.AutoSize = true;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(35, 158);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Descripción:";
-            this.label7.UseCompatibleTextRendering = true;
+            this.staticDesc.AutoSize = true;
+            this.staticDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staticDesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticDesc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staticDesc.Location = new System.Drawing.Point(35, 158);
+            this.staticDesc.Name = "staticDesc";
+            this.staticDesc.Size = new System.Drawing.Size(70, 19);
+            this.staticDesc.TabIndex = 7;
+            this.staticDesc.Text = "Descripción:";
+            this.staticDesc.UseCompatibleTextRendering = true;
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.Location = new System.Drawing.Point(112, 158);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(362, 50);
-            this.textBox1.TabIndex = 8;
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtDescripcion.Location = new System.Drawing.Point(112, 158);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(362, 50);
+            this.txtDescripcion.TabIndex = 8;
             // 
-            // bunifuSeparator1
+            // sepH2
             // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(35, 236);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(439, 12);
-            this.bunifuSeparator1.TabIndex = 9;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
+            this.sepH2.BackColor = System.Drawing.Color.Transparent;
+            this.sepH2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.sepH2.LineThickness = 1;
+            this.sepH2.Location = new System.Drawing.Point(35, 236);
+            this.sepH2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sepH2.Name = "sepH2";
+            this.sepH2.Size = new System.Drawing.Size(439, 12);
+            this.sepH2.TabIndex = 9;
+            this.sepH2.Transparency = 255;
+            this.sepH2.Vertical = false;
             // 
-            // bunifuSeparator2
+            // sepH1
             // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(35, 65);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(439, 12);
-            this.bunifuSeparator2.TabIndex = 10;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
+            this.sepH1.BackColor = System.Drawing.Color.Transparent;
+            this.sepH1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.sepH1.LineThickness = 1;
+            this.sepH1.Location = new System.Drawing.Point(35, 65);
+            this.sepH1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sepH1.Name = "sepH1";
+            this.sepH1.Size = new System.Drawing.Size(439, 12);
+            this.sepH1.TabIndex = 10;
+            this.sepH1.Transparency = 255;
+            this.sepH1.Vertical = false;
             // 
-            // bunifuCustomDataGrid1
+            // dgVisitas
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgVisitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgVisitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgVisitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
+            this.dgVisitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgVisitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dgVisitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,26 +201,26 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeight = 25;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgVisitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgVisitas.ColumnHeadersHeight = 25;
+            this.dgVisitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.user,
             this.valoracion,
             this.comentario});
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(34, 257);
-            this.bunifuCustomDataGrid1.MultiSelect = false;
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.ReadOnly = true;
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.RowTemplate.Height = 25;
-            this.bunifuCustomDataGrid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(439, 249);
-            this.bunifuCustomDataGrid1.TabIndex = 11;
+            this.dgVisitas.DoubleBuffered = true;
+            this.dgVisitas.EnableHeadersVisualStyles = false;
+            this.dgVisitas.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgVisitas.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.dgVisitas.HeaderForeColor = System.Drawing.SystemColors.ControlLight;
+            this.dgVisitas.Location = new System.Drawing.Point(34, 257);
+            this.dgVisitas.MultiSelect = false;
+            this.dgVisitas.Name = "dgVisitas";
+            this.dgVisitas.ReadOnly = true;
+            this.dgVisitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgVisitas.RowTemplate.Height = 25;
+            this.dgVisitas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgVisitas.Size = new System.Drawing.Size(439, 249);
+            this.dgVisitas.TabIndex = 11;
             // 
             // user
             // 
@@ -247,27 +243,27 @@
             this.comentario.Name = "comentario";
             this.comentario.ReadOnly = true;
             // 
-            // bunifuRating1
+            // ratLugar
             // 
-            this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.bunifuRating1.Location = new System.Drawing.Point(524, 70);
-            this.bunifuRating1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuRating1.Name = "bunifuRating1";
-            this.bunifuRating1.Size = new System.Drawing.Size(221, 38);
-            this.bunifuRating1.TabIndex = 12;
-            this.bunifuRating1.Value = 0;
+            this.ratLugar.BackColor = System.Drawing.Color.Transparent;
+            this.ratLugar.Enabled = false;
+            this.ratLugar.ForeColor = System.Drawing.Color.Goldenrod;
+            this.ratLugar.Location = new System.Drawing.Point(525, 65);
+            this.ratLugar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ratLugar.Name = "ratLugar";
+            this.ratLugar.Size = new System.Drawing.Size(210, 35);
+            this.ratLugar.TabIndex = 12;
+            this.ratLugar.Value = 0;
             // 
-            // label8
+            // lblCalificacion
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("League Spartan", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label8.Location = new System.Drawing.Point(517, 122);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 44);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "5.5/10";
+            this.lblCalificacion.AutoSize = true;
+            this.lblCalificacion.Font = new System.Drawing.Font("League Spartan", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalificacion.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblCalificacion.Location = new System.Drawing.Point(517, 122);
+            this.lblCalificacion.Name = "lblCalificacion";
+            this.lblCalificacion.Size = new System.Drawing.Size(0, 44);
+            this.lblCalificacion.TabIndex = 14;
             // 
             // lblLatitud
             // 
@@ -280,42 +276,6 @@
             this.lblLatitud.Size = new System.Drawing.Size(0, 19);
             this.lblLatitud.TabIndex = 15;
             this.lblLatitud.UseCompatibleTextRendering = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(207, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 19);
-            this.label1.TabIndex = 16;
-            this.label1.UseCompatibleTextRendering = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(470, 310);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 19);
-            this.label9.TabIndex = 17;
-            this.label9.UseCompatibleTextRendering = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(60, 81);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 19);
-            this.label10.TabIndex = 18;
-            this.label10.UseCompatibleTextRendering = true;
             // 
             // lblLongitud
             // 
@@ -402,22 +362,19 @@
             this.Controls.Add(this.lblEtiqueta);
             this.Controls.Add(this.lblCiudad);
             this.Controls.Add(this.lblLongitud);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLatitud);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.bunifuRating1);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
-            this.Controls.Add(this.bunifuSeparator2);
-            this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCalificacion);
+            this.Controls.Add(this.ratLugar);
+            this.Controls.Add(this.dgVisitas);
+            this.Controls.Add(this.sepH1);
+            this.Controls.Add(this.sepH2);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.staticDesc);
+            this.Controls.Add(this.staticCiudad);
+            this.Controls.Add(this.staticEtiq);
+            this.Controls.Add(this.staticCat);
+            this.Controls.Add(this.staticLong);
+            this.Controls.Add(this.staticLat);
             this.Controls.Add(this.mapaLugar);
             this.Controls.Add(this.lblNombreLugar);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -426,7 +383,7 @@
             this.Name = "VentanaMuestraLugar";
             this.Text = "VentanaMuestraLugar";
             this.Load += new System.EventHandler(this.VentanaMuestraLugar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVisitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,25 +392,22 @@
         #endregion
 
         private System.Windows.Forms.Label lblNombreLugar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private Bunifu.Framework.UI.BunifuRating bunifuRating1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label staticLat;
+        private System.Windows.Forms.Label staticLong;
+        private System.Windows.Forms.Label staticCat;
+        private System.Windows.Forms.Label staticEtiq;
+        private System.Windows.Forms.Label staticCiudad;
+        private System.Windows.Forms.Label staticDesc;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private Bunifu.Framework.UI.BunifuSeparator sepH2;
+        private Bunifu.Framework.UI.BunifuSeparator sepH1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgVisitas;
+        private Bunifu.Framework.UI.BunifuRating ratLugar;
+        private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblLatitud;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn user;
         private System.Windows.Forms.DataGridViewTextBoxColumn valoracion;
         private System.Windows.Forms.DataGridViewTextBoxColumn comentario;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblLongitud;
         private System.Windows.Forms.Label lblCiudad;
         private System.Windows.Forms.Label lblEtiqueta;

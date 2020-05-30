@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Soporte.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,9 @@ namespace CuatroCuadras.VentanasComplementarias
             InitializeComponent();
         }
 
-        
+        private void VentanaInicio_Load(object sender, EventArgs e)
+        {
+            lblBienvenida.Text = String.Format("Hola, {0}", UsuarioCache.nickname);
+        }
     }
 }
