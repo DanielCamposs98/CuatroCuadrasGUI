@@ -175,17 +175,16 @@ namespace Persistencia
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM USUARIO WHERE Nickname= @nick OR Email=@mail";
-                    command.Parameters.AddWithValue("@nick", solicitud);
-                    command.Parameters.AddWithValue("@mail", solicitud);
+                    command.CommandText = "SELECT nickname,nombre,apellidos,email, CONVERT(VARCHAR(MAX),DECRYPTBYPASSPHRASE('contrasena',contrasena)) FROM USUARIO WHERE Email= @email ";
+                    command.Parameters.AddWithValue("@email", solicitud);
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
 
                     if (reader.Read() == true)
                     {
-                        string nick = reader.GetString(3) + "," + reader.GetString(1);
-                        string mail = reader.GetString(5);
-                        string pass = reader.GetString(6);
+                        string nick = reader.GetString(2) + "," + reader.GetString(1);
+                        string mail = reader.GetString(3);
+                        string pass = reader.GetString(4);
                         string user = reader.GetString(0);
 
                         var mailService = new ServiciosMail.SoporteMail();

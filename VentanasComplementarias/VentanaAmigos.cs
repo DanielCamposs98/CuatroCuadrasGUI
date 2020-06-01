@@ -1,14 +1,8 @@
 ﻿using Dominio;
 using Soporte.Cache;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CuatroCuadras.VentanasComplementarias
@@ -59,7 +53,7 @@ namespace CuatroCuadras.VentanasComplementarias
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = string.Format("exec USP_AmigosSugeridos '{0}'",UsuarioCache.nickname);
+                    command.CommandText = string.Format("exec USP_AmigosSugeridos '{0}'", UsuarioCache.nickname);
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
                     if (reader.HasRows)
@@ -72,6 +66,8 @@ namespace CuatroCuadras.VentanasComplementarias
                 }
             }
         }
+
+
 
         private void llenarListaAmigos()
         {
@@ -106,6 +102,104 @@ namespace CuatroCuadras.VentanasComplementarias
                         }
                     }
                 }
+            }
+        }
+
+        private void dgAmigos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgAmigos.Columns["btnMostrarPerfil"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow dgv = dgAmigos.Rows[e.RowIndex];
+                string nicknameAmigo = dgv.Cells[0].Value.ToString();
+
+                CuatroCuadras.panelP.Controls.Clear();
+
+                Otros.UsoFormulario.AbrirFormularioParametrosPerfil<VentanaPerfil>(CuatroCuadras.panelP,nicknameAmigo);
+            }
+
+
+            if (e.ColumnIndex == dgAmigos.Columns["btnAmigosComun"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow dgv = dgAmigos.Rows[e.RowIndex];
+                string nombreL = dgv.Cells[0].Value.ToString();
+
+                new VentanasEmergentes.MBAmigosEnComun(UsuarioCache.nickname, nombreL).ShowDialog();
+
+            }
+        }
+
+        private void dgSugerencias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgSugerencias.Columns["btnAgregar"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow dgv = dgSugerencias.Rows[e.RowIndex];
+                string nicknameSug = dgv.Cells[0].Value.ToString();
+
+                SqlDataReader reader;
+                using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = string.Format("exec USP_SolicitudAmistad '{0}','{1}'", UsuarioCache.nickname,nicknameSug);
+                        command.CommandType = CommandType.Text;
+                        reader = command.ExecuteReader();
+                    }
+                }
+                CuatroCuadras.panelP.Controls.Clear();
+                Otros.UsoFormulario.AbrirFormulario<VentanaAmigos>(CuatroCuadras.panelP);
+            }
+        }
+
+        private void dgSolicitudes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgSolicitudes.Columns["btnAceptarSol"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow dgv = dgSolicitudes.Rows[e.RowIndex];
+                string nicknameAmigo = dgv.Cells[0].Value.ToString();
+
+                SqlDataReader reader;
+                using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = string.Format("UPDATE AMIGO SET estado='A' WHERE nickname1='{0}' AND nickname2='{1}'",nicknameAmigo,UsuarioCache.nickname);
+                        command.CommandType = CommandType.Text;
+                        reader = command.ExecuteReader();
+                    }
+                }
+
+                CuatroCuadras.panelP.Controls.Clear();
+
+                Otros.UsoFormulario.AbrirFormulario<VentanaAmigos>(CuatroCuadras.panelP);
+            }
+
+
+            if (e.ColumnIndex == dgSolicitudes.Columns["btnRechazarSol"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow dgv = dgSolicitudes.Rows[e.RowIndex];
+                string nicknameAmigo = dgv.Cells[0].Value.ToString();
+
+                SqlDataReader reader;
+                using (var connection = ModeloUsuario.GetConsUser().GetConnection())
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = string.Format("UPDATE AMIGO SET estado='R' WHERE nickname1='{0}' AND nickname2='{1}'", nicknameAmigo, UsuarioCache.nickname);
+                        command.CommandType = CommandType.Text;
+                        reader = command.ExecuteReader();
+                    }
+                }
+
+                CuatroCuadras.panelP.Controls.Clear();
+
+                Otros.UsoFormulario.AbrirFormulario<VentanaAmigos>(CuatroCuadras.panelP);
+
             }
         }
     }

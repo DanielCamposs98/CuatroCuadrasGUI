@@ -1,4 +1,5 @@
 ﻿using CuatroCuadras.Ventanas_Iniciales;
+using CuatroCuadras.VentanasCrearCuenta;
 using Dominio;
 using System;
 using System.Windows.Forms;
@@ -21,10 +22,9 @@ namespace CuatroCuadras
         private void lkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Hide();
-            VentanasCrearCuenta.CreaCuentaV1 ru = new VentanasCrearCuenta.CreaCuentaV1();
+            CreaCuentaV1 ru = new CreaCuentaV1();
             ru.Show();
             ru.FormClosed += devolverVentana;
-
         }
 
         #region ArrastrarVentana

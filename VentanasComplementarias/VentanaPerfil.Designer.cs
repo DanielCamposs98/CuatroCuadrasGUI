@@ -37,6 +37,10 @@
             this.lblCiudad = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgVisitas = new System.Windows.Forms.DataGridView();
+            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.dgLogros = new System.Windows.Forms.DataGridView();
             this.Logro = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,10 +48,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgVisitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgLogros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -151,6 +151,37 @@
             this.dgVisitas.Size = new System.Drawing.Size(430, 231);
             this.dgVisitas.TabIndex = 8;
             // 
+            // Lugar
+            // 
+            this.Lugar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Lugar.HeaderText = "Lugar";
+            this.Lugar.Name = "Lugar";
+            this.Lugar.ReadOnly = true;
+            // 
+            // Valoracion
+            // 
+            this.Valoracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Valoracion.HeaderText = "Valoración";
+            this.Valoracion.Name = "Valoracion";
+            this.Valoracion.ReadOnly = true;
+            this.Valoracion.Width = 70;
+            // 
+            // Comentario
+            // 
+            this.Comentario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Comentario.HeaderText = "Comentario";
+            this.Comentario.Name = "Comentario";
+            this.Comentario.ReadOnly = true;
+            this.Comentario.Width = 130;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 120;
+            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
@@ -165,6 +196,7 @@
             // 
             // dgLogros
             // 
+            this.dgLogros.AllowUserToAddRows = false;
             this.dgLogros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
             this.dgLogros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Logro,
@@ -223,37 +255,6 @@
             this.label3.Size = new System.Drawing.Size(137, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Check-ins Realizados";
-            // 
-            // Lugar
-            // 
-            this.Lugar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Lugar.HeaderText = "Lugar";
-            this.Lugar.Name = "Lugar";
-            this.Lugar.ReadOnly = true;
-            // 
-            // Valoracion
-            // 
-            this.Valoracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Valoracion.HeaderText = "Valoración";
-            this.Valoracion.Name = "Valoracion";
-            this.Valoracion.ReadOnly = true;
-            this.Valoracion.Width = 70;
-            // 
-            // Comentario
-            // 
-            this.Comentario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Comentario.HeaderText = "Comentario";
-            this.Comentario.Name = "Comentario";
-            this.Comentario.ReadOnly = true;
-            this.Comentario.Width = 130;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 120;
             // 
             // VentanaPerfil
             // 

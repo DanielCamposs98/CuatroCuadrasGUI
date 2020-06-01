@@ -49,8 +49,9 @@
             this.txtConfirmaContrasena = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnConfirmar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmbCiudades = new System.Windows.Forms.ComboBox();
+            this.lblMsgError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfirmar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +112,7 @@
             this.txtNombre.Size = new System.Drawing.Size(298, 31);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellidos
             // 
@@ -129,6 +131,7 @@
             this.txtApellidos.Size = new System.Drawing.Size(298, 31);
             this.txtApellidos.TabIndex = 4;
             this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
             // label3
             // 
@@ -187,7 +190,7 @@
             // 
             // cmbSexo
             // 
-            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cmbSexo.Enabled = false;
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
@@ -200,18 +203,21 @@
             // 
             // dpFecha
             // 
+            this.dpFecha.AutoSize = true;
             this.dpFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.dpFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.dpFecha.BorderRadius = 0;
             this.dpFecha.Enabled = false;
+            this.dpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpFecha.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.dpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dpFecha.FormatCustom = null;
             this.dpFecha.Location = new System.Drawing.Point(456, 281);
+            this.dpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dpFecha.Name = "dpFecha";
-            this.dpFecha.Size = new System.Drawing.Size(296, 22);
+            this.dpFecha.Size = new System.Drawing.Size(296, 39);
             this.dpFecha.TabIndex = 12;
-            this.dpFecha.Value = new System.DateTime(2020, 5, 27, 1, 59, 15, 236);
+            this.dpFecha.Value = new System.DateTime(2020, 5, 27, 0, 0, 0, 0);
             // 
             // label8
             // 
@@ -241,6 +247,7 @@
             this.txtCorreo.Size = new System.Drawing.Size(298, 31);
             this.txtCorreo.TabIndex = 13;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // label9
             // 
@@ -263,13 +270,14 @@
             this.txtContrasena.Enabled = false;
             this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtContrasena.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtContrasena.isPassword = false;
+            this.txtContrasena.isPassword = true;
             this.txtContrasena.Location = new System.Drawing.Point(454, 179);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(298, 31);
             this.txtContrasena.TabIndex = 15;
             this.txtContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // label10
             // 
@@ -289,6 +297,7 @@
             this.txtConfirmaContrasena.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.txtConfirmaContrasena.BorderThickness = 3;
             this.txtConfirmaContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmaContrasena.Enabled = false;
             this.txtConfirmaContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtConfirmaContrasena.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtConfirmaContrasena.isPassword = false;
@@ -313,6 +322,7 @@
             // btnConfirmar
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnConfirmar.Enabled = false;
             this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
             this.btnConfirmar.ImageActive = null;
             this.btnConfirmar.Location = new System.Drawing.Point(681, 373);
@@ -322,44 +332,46 @@
             this.btnConfirmar.TabIndex = 23;
             this.btnConfirmar.TabStop = false;
             this.btnConfirmar.Zoom = 10;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // bunifuFlatButton1
+            // btnEditar
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 2;
-            this.bunifuFlatButton1.ButtonText = "Editar";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(653, 73);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(99, 24);
-            this.bunifuFlatButton1.TabIndex = 24;
-            this.bunifuFlatButton1.Text = "Editar";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.BorderRadius = 2;
+            this.btnEditar.ButtonText = "Editar";
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEditar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEditar.Iconimage = null;
+            this.btnEditar.Iconimage_right = null;
+            this.btnEditar.Iconimage_right_Selected = null;
+            this.btnEditar.Iconimage_Selected = null;
+            this.btnEditar.IconMarginLeft = 0;
+            this.btnEditar.IconMarginRight = 0;
+            this.btnEditar.IconRightVisible = true;
+            this.btnEditar.IconRightZoom = 0D;
+            this.btnEditar.IconVisible = true;
+            this.btnEditar.IconZoom = 90D;
+            this.btnEditar.IsTab = false;
+            this.btnEditar.Location = new System.Drawing.Point(653, 73);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnEditar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnEditar.OnHoverTextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.selected = false;
+            this.btnEditar.Size = new System.Drawing.Size(99, 24);
+            this.btnEditar.TabIndex = 24;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditar.Textcolor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.TextFont = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // cmbCiudades
             // 
-            this.cmbCiudades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCiudades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cmbCiudades.Enabled = false;
             this.cmbCiudades.FormattingEnabled = true;
             this.cmbCiudades.Location = new System.Drawing.Point(459, 237);
@@ -367,14 +379,25 @@
             this.cmbCiudades.Size = new System.Drawing.Size(293, 21);
             this.cmbCiudades.TabIndex = 25;
             // 
+            // lblMsgError
+            // 
+            this.lblMsgError.AutoSize = true;
+            this.lblMsgError.BackColor = System.Drawing.Color.Transparent;
+            this.lblMsgError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblMsgError.Location = new System.Drawing.Point(61, 345);
+            this.lblMsgError.Name = "lblMsgError";
+            this.lblMsgError.Size = new System.Drawing.Size(0, 13);
+            this.lblMsgError.TabIndex = 26;
+            // 
             // VentanaConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(807, 518);
+            this.Controls.Add(this.lblMsgError);
             this.Controls.Add(this.cmbCiudades);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtConfirmaContrasena);
@@ -427,7 +450,8 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtConfirmaContrasena;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuImageButton btnConfirmar;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private System.Windows.Forms.ComboBox cmbCiudades;
+        private System.Windows.Forms.Label lblMsgError;
     }
 }

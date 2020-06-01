@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblError = new System.Windows.Forms.Label();
-            this.txtUsuario = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtCorreo = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnAceptar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -43,7 +43,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.lblError);
-            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.btnAceptar);
             this.panel1.Controls.Add(this.lblMensaje);
             this.panel1.Location = new System.Drawing.Point(0, 32);
@@ -62,23 +62,26 @@
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 3;
             // 
-            // txtUsuario
+            // txtCorreo
             // 
-            this.txtUsuario.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.txtUsuario.BorderColorIdle = System.Drawing.Color.Black;
-            this.txtUsuario.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.txtUsuario.BorderThickness = 2;
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUsuario.isPassword = false;
-            this.txtUsuario.Location = new System.Drawing.Point(48, 64);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(456, 40);
-            this.txtUsuario.TabIndex = 9;
-            this.txtUsuario.Text = "Usuario o Correo";
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCorreo.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
+            this.txtCorreo.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtCorreo.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.txtCorreo.BorderThickness = 2;
+            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCorreo.isPassword = false;
+            this.txtCorreo.Location = new System.Drawing.Point(48, 64);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(456, 40);
+            this.txtCorreo.TabIndex = 9;
+            this.txtCorreo.Text = "Ingresa Email";
+            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // btnAceptar
             // 
@@ -136,6 +139,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label1
             // 
@@ -177,7 +181,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMensaje;
         private Bunifu.Framework.UI.BunifuFlatButton btnAceptar;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtUsuario;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtCorreo;
         private System.Windows.Forms.Label lblError;
     }
 }

@@ -31,5 +31,16 @@ namespace CuatroCuadras.VentanasEmergentes
         {
             this.Hide();
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FormCollection formulariosApp = Application.OpenForms;
+            foreach (Form f in formulariosApp)
+            {
+                f.Hide();
+            }
+            InicioSesionForm cc = new InicioSesionForm();
+            cc.Show();
+        }
     }
 }

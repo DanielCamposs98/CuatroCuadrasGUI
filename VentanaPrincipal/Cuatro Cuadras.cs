@@ -9,17 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Soporte.Cache;
 using Dominio;
-
+using CuatroCuadras.VentanasEmergentes;
 
 namespace CuatroCuadras
 {
     public partial class CuatroCuadras : Form
     {
+        public static Panel panelP;
         public CuatroCuadras()
         {
             InitializeComponent();
+            panelP = panelPrincipal;
         }
 
+       
         private void MenuPrincipalForm_Load(object sender, EventArgs e)
         {
             aplicarSeguridad();
@@ -56,13 +59,13 @@ namespace CuatroCuadras
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            new VentanasEmergentes.MBConfirmarLogout().ShowDialog();
+            new MBConfirmarLogout().ShowDialog();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             panelPrincipal.Controls.Clear();
-            Otros.UsoFormulario.AbrirFormulario<VentanasComplementarias.VentanaPerfil>(panelPrincipal);
+            Otros.UsoFormulario.AbrirFormularioParametrosPerfil<VentanasComplementarias.VentanaPerfil>(panelPrincipal,UsuarioCache.nickname);
         }
 
         private void btnAmigos_Click(object sender, EventArgs e)

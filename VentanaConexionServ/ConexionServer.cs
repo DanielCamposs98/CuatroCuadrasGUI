@@ -58,5 +58,10 @@ namespace CuatroCuadras.VentanaConexionServ
                 new VentanasEmergentes.MBNoConnection().ShowDialog();
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

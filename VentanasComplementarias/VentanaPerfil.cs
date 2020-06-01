@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Dominio;
+using Soporte.Cache;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Soporte.Cache;
-using Dominio;
 namespace CuatroCuadras.VentanasComplementarias
 {
     public partial class VentanaPerfil : Form
     {
         SqlDataReader reader;
+        string nickname;
+
         public VentanaPerfil()
         {
+        }
+        public VentanaPerfil(string nick)
+        {
+            nickname = nick;
             InitializeComponent();
         }
 
@@ -29,27 +29,49 @@ namespace CuatroCuadras.VentanasComplementarias
 
         private void obtenDatosPersonales()
         {
-            lblNickname.Text = UsuarioCache.nickname;
-            lblNombre.Text = String.Concat(UsuarioCache.nombre, " ", UsuarioCache.apellidos);
-            lblCorreo.Text = String.Concat("Email: ", UsuarioCache.email,".");
-
-            if (UsuarioCache.sexo.Equals('M'))
-            {
-                lblSexo.Text = "Sexo: Masculino.";
-            }
-            else
-            {
-                lblSexo.Text = "Sexo: Femenino.";
-            }
-
+            DateTime? fecha = null;
             using (var connection = ModeloUsuario.GetConsUser().GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
+                    command.Connection = connection;
+                    command.CommandText = String.Format("SELECT nickname, nombre,apellidos, email, sexo, fecha_nacimiento FROM USUARIO WHERE Nickname='{0}'", nickname);
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        lblNickname.Text = nickname;
+                        lblNombre.Text = String.Concat(reader.GetValue(1), " ", reader.GetValue(2));
+                        lblCorreo.Text = String.Concat("Email: ", reader.GetValue(3));
+                        if (reader.GetValue(4).Equals("M"))
+                        {
+                            lblSexo.Text = "Sexo: Masculino.";
+                        }
+                        else
+                        {
+                            lblSexo.Text = "Sexo: Femenino.";
+                        }
+                        fecha = Convert.ToDateTime(reader.GetValue(5));
+                    }
+                    reader.Close();
+
+                    //Obtener Edad
+                    string fec = String.Format("{0}-{1}-{2}", fecha.Value.Year, fecha.Value.Month, fecha.Value.Day);
+                    command.CommandText = String.Format("SELECT DATEDIFF(YEAR,'{0}',GETDATE()) FROM USUARIO WHERE nickname='{1}'", fec, nickname);
+                    reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        lblEdad.Text = String.Format("Edad: {0}.", reader.GetValue(0).ToString());
+                    }
+
+                    reader.Close();
+
+
                     //Obtener nombre ciudad
                     command.Connection = connection;
-                    command.CommandText = String.Format("SELECT C.ciudad FROM USUARIO U JOIN CIUDAD C ON C.ID_Ciudad=U.ID_Ciudad WHERE U.Nickname='{0}'",UsuarioCache.nickname);
+                    command.CommandText = String.Format("SELECT C.ciudad FROM USUARIO U JOIN CIUDAD C ON C.ID_Ciudad=U.ID_Ciudad WHERE U.Nickname='{0}'", nickname);
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
 
@@ -60,35 +82,27 @@ namespace CuatroCuadras.VentanasComplementarias
 
                     reader.Close();
 
-                    //Obtener Edad
-                    string fecha = String.Format("{0}-{1}-{2}", UsuarioCache.fechaNacimiento.Year, UsuarioCache.fechaNacimiento.Month, UsuarioCache.fechaNacimiento.Day);
-                    command.CommandText = String.Format("SELECT DATEDIFF(YEAR,'{0}',GETDATE()) FROM USUARIO WHERE nickname='{1}'", fecha, UsuarioCache.nickname);
-                    reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        lblEdad.Text = String.Format("Edad: {0}.", reader.GetValue(0).ToString());
-                    }
- 
+                   
                 }
             }
         }
 
         private void obtenLogrosObtenidos()
         {
-            using (var connection = ModeloUsuario.GetConsUser().GetConnection() )
+            using (var connection = ModeloUsuario.GetConsUser().GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = string.Format("SELECT L.nombre, CONVERT(DATE,LU.fecha) FROM LOGRO_USUARIO LU JOIN LOGRO L ON LU.ID_Logro=L.ID_Logro WHERE LU.Nickname='{0}'", UsuarioCache.nickname);
+                    command.CommandText = string.Format("SELECT L.nombre, CONVERT(DATE,LU.fecha) FROM LOGRO_USUARIO LU JOIN LOGRO L ON LU.ID_Logro=L.ID_Logro WHERE LU.Nickname='{0}'",nickname);
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            dgLogros.Rows.Add(reader.GetValue(0).ToString(),reader.GetValue(1).ToString());
+                            dgLogros.Rows.Add(reader.GetValue(0).ToString(), reader.GetValue(1).ToString());
                         }
                     }
                 }
@@ -103,7 +117,7 @@ namespace CuatroCuadras.VentanasComplementarias
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = string.Format("SELECT L.Nombre,V.Valoracion, V.Comentario, CONVERT(DATE,V.fecha) FROM Visita V JOIN USUARIO U ON U.Nickname=V.Nickname JOIN Lugar L ON L.ID_Lugar=V.ID_Lugar WHERE U.Nickname='{0}'", UsuarioCache.nickname);
+                    command.CommandText = string.Format("SELECT L.Nombre,V.Valoracion, V.Comentario, CONVERT(DATE,V.fecha) FROM Visita V JOIN USUARIO U ON U.Nickname=V.Nickname JOIN Lugar L ON L.ID_Lugar=V.ID_Lugar WHERE U.Nickname='{0}'", nickname);
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
                     if (reader.HasRows)

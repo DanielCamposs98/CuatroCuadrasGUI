@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombreLugar = new System.Windows.Forms.Label();
             this.staticLat = new System.Windows.Forms.Label();
             this.staticLong = new System.Windows.Forms.Label();
@@ -187,21 +187,23 @@
             // 
             // dgVisitas
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgVisitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgVisitas.AllowUserToAddRows = false;
+            this.dgVisitas.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgVisitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgVisitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgVisitas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
             this.dgVisitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgVisitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgVisitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgVisitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgVisitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgVisitas.ColumnHeadersHeight = 25;
             this.dgVisitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.user,
@@ -245,13 +247,16 @@
             // 
             // ratLugar
             // 
+            this.ratLugar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ratLugar.BackColor = System.Drawing.Color.Transparent;
+            this.ratLugar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ratLugar.Enabled = false;
+            this.ratLugar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.5F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ratLugar.ForeColor = System.Drawing.Color.Goldenrod;
-            this.ratLugar.Location = new System.Drawing.Point(525, 65);
+            this.ratLugar.Location = new System.Drawing.Point(489, 65);
             this.ratLugar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ratLugar.Name = "ratLugar";
-            this.ratLugar.Size = new System.Drawing.Size(210, 35);
+            this.ratLugar.Size = new System.Drawing.Size(193, 33);
             this.ratLugar.TabIndex = 12;
             this.ratLugar.Value = 0;
             // 
@@ -260,7 +265,7 @@
             this.lblCalificacion.AutoSize = true;
             this.lblCalificacion.Font = new System.Drawing.Font("League Spartan", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalificacion.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblCalificacion.Location = new System.Drawing.Point(517, 122);
+            this.lblCalificacion.Location = new System.Drawing.Point(499, 114);
             this.lblCalificacion.Name = "lblCalificacion";
             this.lblCalificacion.Size = new System.Drawing.Size(0, 44);
             this.lblCalificacion.TabIndex = 14;
@@ -358,13 +363,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(807, 518);
+            this.Controls.Add(this.ratLugar);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblEtiqueta);
             this.Controls.Add(this.lblCiudad);
             this.Controls.Add(this.lblLongitud);
             this.Controls.Add(this.lblLatitud);
             this.Controls.Add(this.lblCalificacion);
-            this.Controls.Add(this.ratLugar);
             this.Controls.Add(this.dgVisitas);
             this.Controls.Add(this.sepH1);
             this.Controls.Add(this.sepH2);

@@ -79,8 +79,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 42);
             this.button1.TabIndex = 14;
-            this.button1.Text = "CONFIGURACIÓN";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Text = "  CONFIGURACIÓN";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -112,7 +111,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(184, 42);
             this.btnLogout.TabIndex = 12;
-            this.btnLogout.Text = "          CERRAR SESIÓN";
+            this.btnLogout.Text = "CERRAR SESIÓN";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -255,8 +254,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuSeparator bfSeparator1;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.PictureBox btnCerrar;
@@ -269,5 +266,6 @@
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

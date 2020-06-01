@@ -29,17 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaInicio));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBienvenida = new System.Windows.Forms.Label();
-            this.separadorH = new Bunifu.Framework.UI.BunifuSeparator();
-            this.separadorV1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.separadorV2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.lblAccion = new System.Windows.Forms.Label();
-            this.bunifuTileButton6 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton4 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton5 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton3 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnLugVis = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnUsuariosPop = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnCheckIn = new Bunifu.Framework.UI.BunifuTileButton();
+            this.dgAvanceLogros = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.logro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VisitasN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VisitasR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Avance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAvanceLogros)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBienvenida
@@ -53,176 +60,162 @@
             this.lblBienvenida.TabIndex = 0;
             this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // separadorH
-            // 
-            this.separadorH.BackColor = System.Drawing.Color.Transparent;
-            this.separadorH.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.separadorH.LineThickness = 1;
-            this.separadorH.Location = new System.Drawing.Point(50, 333);
-            this.separadorH.Margin = new System.Windows.Forms.Padding(6);
-            this.separadorH.Name = "separadorH";
-            this.separadorH.Size = new System.Drawing.Size(721, 11);
-            this.separadorH.TabIndex = 7;
-            this.separadorH.Transparency = 255;
-            this.separadorH.Vertical = false;
-            // 
-            // separadorV1
-            // 
-            this.separadorV1.BackColor = System.Drawing.Color.Transparent;
-            this.separadorV1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.separadorV1.LineThickness = 1;
-            this.separadorV1.Location = new System.Drawing.Point(281, 225);
-            this.separadorV1.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
-            this.separadorV1.Name = "separadorV1";
-            this.separadorV1.Size = new System.Drawing.Size(10, 226);
-            this.separadorV1.TabIndex = 8;
-            this.separadorV1.Transparency = 255;
-            this.separadorV1.Vertical = true;
-            // 
-            // separadorV2
-            // 
-            this.separadorV2.BackColor = System.Drawing.Color.Transparent;
-            this.separadorV2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.separadorV2.LineThickness = 1;
-            this.separadorV2.Location = new System.Drawing.Point(526, 225);
-            this.separadorV2.Margin = new System.Windows.Forms.Padding(20, 23, 20, 23);
-            this.separadorV2.Name = "separadorV2";
-            this.separadorV2.Size = new System.Drawing.Size(13, 227);
-            this.separadorV2.TabIndex = 10;
-            this.separadorV2.Transparency = 255;
-            this.separadorV2.Vertical = true;
-            // 
             // lblAccion
             // 
             this.lblAccion.AutoSize = true;
             this.lblAccion.Font = new System.Drawing.Font("Microsoft YaHei UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAccion.Location = new System.Drawing.Point(212, 135);
+            this.lblAccion.Location = new System.Drawing.Point(207, 112);
             this.lblAccion.Name = "lblAccion";
             this.lblAccion.Size = new System.Drawing.Size(382, 39);
             this.lblAccion.TabIndex = 11;
             this.lblAccion.Text = "¿Qué vamos a hacer hoy?";
             this.lblAccion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // bunifuTileButton6
+            // btnLugVis
             // 
-            this.bunifuTileButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTileButton6.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton6.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuTileButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline);
-            this.bunifuTileButton6.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton6.Image")));
-            this.bunifuTileButton6.ImagePosition = 20;
-            this.bunifuTileButton6.ImageZoom = 25;
-            this.bunifuTileButton6.LabelPosition = 41;
-            this.bunifuTileButton6.LabelText = "a";
-            this.bunifuTileButton6.Location = new System.Drawing.Point(51, 346);
-            this.bunifuTileButton6.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton6.Name = "bunifuTileButton6";
-            this.bunifuTileButton6.Size = new System.Drawing.Size(226, 109);
-            this.bunifuTileButton6.TabIndex = 9;
+            this.btnLugVis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnLugVis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnLugVis.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnLugVis.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnLugVis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLugVis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.btnLugVis.ForeColor = System.Drawing.Color.White;
+            this.btnLugVis.Image = ((System.Drawing.Image)(resources.GetObject("btnLugVis.Image")));
+            this.btnLugVis.ImagePosition = 18;
+            this.btnLugVis.ImageZoom = 25;
+            this.btnLugVis.LabelPosition = 36;
+            this.btnLugVis.LabelText = "Lugares más visitados";
+            this.btnLugVis.Location = new System.Drawing.Point(280, 175);
+            this.btnLugVis.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLugVis.Name = "btnLugVis";
+            this.btnLugVis.Size = new System.Drawing.Size(226, 109);
+            this.btnLugVis.TabIndex = 3;
+            this.btnLugVis.Click += new System.EventHandler(this.btnLugVis_Click);
             // 
-            // bunifuTileButton4
+            // btnUsuariosPop
             // 
-            this.bunifuTileButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTileButton4.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton4.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuTileButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline);
-            this.bunifuTileButton4.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton4.Image")));
-            this.bunifuTileButton4.ImagePosition = 20;
-            this.bunifuTileButton4.ImageZoom = 25;
-            this.bunifuTileButton4.LabelPosition = 41;
-            this.bunifuTileButton4.LabelText = "poner";
-            this.bunifuTileButton4.Location = new System.Drawing.Point(297, 346);
-            this.bunifuTileButton4.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton4.Name = "bunifuTileButton4";
-            this.bunifuTileButton4.Size = new System.Drawing.Size(226, 109);
-            this.bunifuTileButton4.TabIndex = 6;
+            this.btnUsuariosPop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnUsuariosPop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnUsuariosPop.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnUsuariosPop.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnUsuariosPop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuariosPop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.btnUsuariosPop.ForeColor = System.Drawing.Color.White;
+            this.btnUsuariosPop.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuariosPop.Image")));
+            this.btnUsuariosPop.ImagePosition = 18;
+            this.btnUsuariosPop.ImageZoom = 25;
+            this.btnUsuariosPop.LabelPosition = 36;
+            this.btnUsuariosPop.LabelText = "Usuarios Populares";
+            this.btnUsuariosPop.Location = new System.Drawing.Point(516, 175);
+            this.btnUsuariosPop.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnUsuariosPop.Name = "btnUsuariosPop";
+            this.btnUsuariosPop.Size = new System.Drawing.Size(226, 109);
+            this.btnUsuariosPop.TabIndex = 2;
+            this.btnUsuariosPop.Click += new System.EventHandler(this.btnUsuariosPop_Click);
             // 
-            // bunifuTileButton5
+            // btnCheckIn
             // 
-            this.bunifuTileButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTileButton5.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton5.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuTileButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline);
-            this.bunifuTileButton5.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton5.Image")));
-            this.bunifuTileButton5.ImagePosition = 20;
-            this.bunifuTileButton5.ImageZoom = 25;
-            this.bunifuTileButton5.LabelPosition = 41;
-            this.bunifuTileButton5.LabelText = "aquí?";
-            this.bunifuTileButton5.Location = new System.Drawing.Point(545, 346);
-            this.bunifuTileButton5.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton5.Name = "bunifuTileButton5";
-            this.bunifuTileButton5.Size = new System.Drawing.Size(226, 109);
-            this.bunifuTileButton5.TabIndex = 5;
+            this.btnCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCheckIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnCheckIn.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCheckIn.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline);
+            this.btnCheckIn.ForeColor = System.Drawing.Color.White;
+            this.btnCheckIn.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckIn.Image")));
+            this.btnCheckIn.ImagePosition = 19;
+            this.btnCheckIn.ImageZoom = 25;
+            this.btnCheckIn.LabelPosition = 35;
+            this.btnCheckIn.LabelText = "Hacer Check-In";
+            this.btnCheckIn.Location = new System.Drawing.Point(44, 175);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(226, 109);
+            this.btnCheckIn.TabIndex = 1;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
-            // bunifuTileButton3
+            // dgAvanceLogros
             // 
-            this.bunifuTileButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTileButton3.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton3.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline);
-            this.bunifuTileButton3.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton3.Image")));
-            this.bunifuTileButton3.ImagePosition = 20;
-            this.bunifuTileButton3.ImageZoom = 25;
-            this.bunifuTileButton3.LabelPosition = 41;
-            this.bunifuTileButton3.LabelText = "rayos";
-            this.bunifuTileButton3.Location = new System.Drawing.Point(297, 224);
-            this.bunifuTileButton3.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton3.Name = "bunifuTileButton3";
-            this.bunifuTileButton3.Size = new System.Drawing.Size(226, 109);
-            this.bunifuTileButton3.TabIndex = 3;
+            this.dgAvanceLogros.AllowUserToAddRows = false;
+            this.dgAvanceLogros.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgAvanceLogros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgAvanceLogros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgAvanceLogros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
+            this.dgAvanceLogros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgAvanceLogros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dgAvanceLogros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAvanceLogros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgAvanceLogros.ColumnHeadersHeight = 25;
+            this.dgAvanceLogros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.logro,
+            this.VisitasN,
+            this.VisitasR,
+            this.Avance});
+            this.dgAvanceLogros.DoubleBuffered = true;
+            this.dgAvanceLogros.EnableHeadersVisualStyles = false;
+            this.dgAvanceLogros.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgAvanceLogros.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.dgAvanceLogros.HeaderForeColor = System.Drawing.SystemColors.ControlLight;
+            this.dgAvanceLogros.Location = new System.Drawing.Point(44, 306);
+            this.dgAvanceLogros.MultiSelect = false;
+            this.dgAvanceLogros.Name = "dgAvanceLogros";
+            this.dgAvanceLogros.ReadOnly = true;
+            this.dgAvanceLogros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgAvanceLogros.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgAvanceLogros.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgAvanceLogros.RowTemplate.Height = 25;
+            this.dgAvanceLogros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAvanceLogros.Size = new System.Drawing.Size(698, 178);
+            this.dgAvanceLogros.TabIndex = 14;
             // 
-            // bunifuTileButton2
+            // logro
             // 
-            this.bunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTileButton2.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton2.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline);
-            this.bunifuTileButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton2.Image")));
-            this.bunifuTileButton2.ImagePosition = 20;
-            this.bunifuTileButton2.ImageZoom = 25;
-            this.bunifuTileButton2.LabelPosition = 41;
-            this.bunifuTileButton2.LabelText = "vamos";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(545, 224);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(226, 109);
-            this.bunifuTileButton2.TabIndex = 2;
+            this.logro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logro.DefaultCellStyle = dataGridViewCellStyle10;
+            this.logro.HeaderText = "Logro";
+            this.logro.Name = "logro";
+            this.logro.ReadOnly = true;
+            this.logro.Width = 180;
             // 
-            // bunifuTileButton1
+            // VisitasN
             // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTileButton1.color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline);
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 20;
-            this.bunifuTileButton1.ImageZoom = 25;
-            this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "¿Qué";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(51, 224);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(226, 109);
-            this.bunifuTileButton1.TabIndex = 1;
+            this.VisitasN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisitasN.DefaultCellStyle = dataGridViewCellStyle11;
+            this.VisitasN.HeaderText = "Visitas Necesarias";
+            this.VisitasN.Name = "VisitasN";
+            this.VisitasN.ReadOnly = true;
+            this.VisitasN.Width = 180;
+            // 
+            // VisitasR
+            // 
+            this.VisitasR.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisitasR.DefaultCellStyle = dataGridViewCellStyle12;
+            this.VisitasR.HeaderText = "Visitas Realizadas";
+            this.VisitasR.Name = "VisitasR";
+            this.VisitasR.ReadOnly = true;
+            this.VisitasR.Width = 180;
+            // 
+            // Avance
+            // 
+            this.Avance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Avance.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Avance.HeaderText = "Avance";
+            this.Avance.Name = "Avance";
+            this.Avance.ReadOnly = true;
             // 
             // VentanaInicio
             // 
@@ -230,16 +223,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(807, 518);
+            this.Controls.Add(this.dgAvanceLogros);
             this.Controls.Add(this.lblAccion);
-            this.Controls.Add(this.separadorV2);
-            this.Controls.Add(this.bunifuTileButton6);
-            this.Controls.Add(this.separadorV1);
-            this.Controls.Add(this.separadorH);
-            this.Controls.Add(this.bunifuTileButton4);
-            this.Controls.Add(this.bunifuTileButton5);
-            this.Controls.Add(this.bunifuTileButton3);
-            this.Controls.Add(this.bunifuTileButton2);
-            this.Controls.Add(this.bunifuTileButton1);
+            this.Controls.Add(this.btnLugVis);
+            this.Controls.Add(this.btnUsuariosPop);
+            this.Controls.Add(this.btnCheckIn);
             this.Controls.Add(this.lblBienvenida);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,6 +235,7 @@
             this.Name = "VentanaInicio";
             this.Text = "VentanaInicio";
             this.Load += new System.EventHandler(this.VentanaInicio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgAvanceLogros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,15 +244,14 @@
         #endregion
 
         private System.Windows.Forms.Label lblBienvenida;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton3;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton4;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton5;
-        private Bunifu.Framework.UI.BunifuSeparator separadorH;
-        private Bunifu.Framework.UI.BunifuSeparator separadorV1;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton6;
-        private Bunifu.Framework.UI.BunifuSeparator separadorV2;
+        private Bunifu.Framework.UI.BunifuTileButton btnCheckIn;
+        private Bunifu.Framework.UI.BunifuTileButton btnUsuariosPop;
+        private Bunifu.Framework.UI.BunifuTileButton btnLugVis;
         private System.Windows.Forms.Label lblAccion;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgAvanceLogros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VisitasN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VisitasR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Avance;
     }
 }

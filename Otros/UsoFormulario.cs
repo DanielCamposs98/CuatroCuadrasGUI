@@ -31,5 +31,51 @@ namespace CuatroCuadras.Otros
                 formulario.BringToFront();
             }
         }
+
+        public static void AbrirFormularioParametros<MiForm>(Panel m,int aux ) where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = m.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+            //si el formulario/instancia no existe
+            if (formulario == null)
+            {
+                formulario = new VentanasComplementarias.VentanaMuestraLugar(aux);
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                m.Controls.Add(formulario);
+                m.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario/instancia existe
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+        public static void AbrirFormularioParametrosPerfil<MiForm>(Panel m, string aux) where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = m.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+            //si el formulario/instancia no existe
+            if (formulario == null)
+            {
+                formulario = new VentanasComplementarias.VentanaPerfil(aux);
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                m.Controls.Add(formulario);
+                m.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario/instancia existe
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
     }
 }

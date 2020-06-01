@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
             this.btnAceptar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblCorreo);
             this.panel1.Controls.Add(this.btnAceptar);
             this.panel1.Controls.Add(this.lblMensaje);
             this.panel1.Location = new System.Drawing.Point(0, 32);
@@ -47,15 +47,16 @@
             this.panel1.Size = new System.Drawing.Size(352, 152);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lblCorreo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
-            this.label2.TabIndex = 6;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Location = new System.Drawing.Point(53, 70);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(33, 13);
+            this.lblCorreo.TabIndex = 6;
+            this.lblCorreo.Text = "Hola";
+            this.lblCorreo.Visible = false;
             // 
             // btnAceptar
             // 
@@ -79,7 +80,7 @@
             this.btnAceptar.IconVisible = false;
             this.btnAceptar.IconZoom = 90D;
             this.btnAceptar.IsTab = false;
-            this.btnAceptar.Location = new System.Drawing.Point(106, 92);
+            this.btnAceptar.Location = new System.Drawing.Point(107, 104);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Normalcolor = System.Drawing.SystemColors.ControlDark;
             this.btnAceptar.OnHovercolor = System.Drawing.SystemColors.ControlDarkDark;
@@ -91,16 +92,17 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAceptar.Textcolor = System.Drawing.Color.White;
             this.btnAceptar.TextFont = new System.Drawing.Font("Century Gothic", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(48, 24);
+            this.lblMensaje.Location = new System.Drawing.Point(70, 16);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(255, 17);
+            this.lblMensaje.Size = new System.Drawing.Size(209, 34);
             this.lblMensaje.TabIndex = 4;
-            this.lblMensaje.Text = "Te hemos enviado tus datos al correo:\r\n";
+            this.lblMensaje.Text = "Te hemos enviado tus datos al \r\ncorreo:";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
@@ -138,8 +140,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnAceptar;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label lblCorreo;
     }
 }

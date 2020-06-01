@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreaCuentaV1));
             this.panelAux = new System.Windows.Forms.Panel();
+            this.lblMensError = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.txtApellido = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
@@ -47,6 +48,7 @@
             // panelAux
             // 
             this.panelAux.BackColor = System.Drawing.SystemColors.Control;
+            this.panelAux.Controls.Add(this.lblMensError);
             this.panelAux.Controls.Add(this.lblSexo);
             this.panelAux.Controls.Add(this.txtApellido);
             this.panelAux.Controls.Add(this.cmbSexo);
@@ -58,6 +60,17 @@
             this.panelAux.Name = "panelAux";
             this.panelAux.Size = new System.Drawing.Size(368, 480);
             this.panelAux.TabIndex = 0;
+            // 
+            // lblMensError
+            // 
+            this.lblMensError.AutoSize = true;
+            this.lblMensError.Font = new System.Drawing.Font("Century Gothic", 10.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.lblMensError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblMensError.Location = new System.Drawing.Point(84, 432);
+            this.lblMensError.Name = "lblMensError";
+            this.lblMensError.Size = new System.Drawing.Size(0, 16);
+            this.lblMensError.TabIndex = 16;
+            this.lblMensError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblSexo
             // 
@@ -88,10 +101,17 @@
             this.txtApellido.TabIndex = 10;
             this.txtApellido.Text = "Apellido";
             this.txtApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
+            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // cmbSexo
             // 
+            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
             this.cmbSexo.Location = new System.Drawing.Point(148, 332);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(138, 21);
@@ -114,6 +134,9 @@
             this.txtNombre.TabIndex = 9;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtUsuario
             // 
@@ -132,6 +155,9 @@
             this.txtUsuario.TabIndex = 8;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // btnContinuar
             // 
@@ -157,6 +183,7 @@
             this.btnContinuar.Size = new System.Drawing.Size(189, 48);
             this.btnContinuar.TabIndex = 7;
             this.btnContinuar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // pbLogo
             // 
@@ -204,6 +231,7 @@
             this.Name = "CreaCuentaV1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroUno";
+            this.Load += new System.EventHandler(this.CreaCuentaV1_Load);
             this.panelAux.ResumeLayout(false);
             this.panelAux.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -225,5 +253,6 @@
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.ComboBox cmbSexo;
         private Bunifu.Framework.UI.BunifuThinButton2 btnContinuar;
+        private System.Windows.Forms.Label lblMensError;
     }
 }

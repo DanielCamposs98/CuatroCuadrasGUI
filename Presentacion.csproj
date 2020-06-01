@@ -163,6 +163,12 @@
     <Compile Include="VentanasCrearCuenta\RegistroUno.Designer.cs">
       <DependentUpon>RegistroUno.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasEmergentes\MBAmigosEnComun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBAmigosEnComun.Designer.cs">
+      <DependentUpon>MBAmigosEnComun.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasEmergentes\MBCancelarCrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,17 +187,35 @@
     <Compile Include="VentanasEmergentes\MBErrorSeguridad.Designer.cs">
       <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasEmergentes\MBLugaresMasVisitados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBLugaresMasVisitados.Designer.cs">
+      <DependentUpon>MBLugaresMasVisitados.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasEmergentes\MBNoConnection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanasEmergentes\MBNoConnection.Designer.cs">
       <DependentUpon>MBNoConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasEmergentes\MBRegistroExitoso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBRegistroExitoso.Designer.cs">
+      <DependentUpon>MBRegistroExitoso.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasEmergentes\MBRestauraContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanasEmergentes\MBRestauraContrasena.Designer.cs">
       <DependentUpon>MBRestauraContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBUsuariosPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasEmergentes\MBUsuariosPop.Designer.cs">
+      <DependentUpon>MBUsuariosPop.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasEmergentes\MBVerificaCorreo.cs">
       <SubType>Form</SubType>
@@ -243,6 +267,9 @@
     <EmbeddedResource Include="VentanasCrearCuenta\RegistroUno.resx">
       <DependentUpon>RegistroUno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBAmigosEnComun.resx">
+      <DependentUpon>MBAmigosEnComun.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBCancelarCrearUsuario.resx">
       <DependentUpon>MBCancelarCrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,11 +279,20 @@
     <EmbeddedResource Include="VentanasEmergentes\MBErrorSeguridad.resx">
       <DependentUpon>MBErrorSeguridad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBLugaresMasVisitados.resx">
+      <DependentUpon>MBLugaresMasVisitados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBNoConnection.resx">
       <DependentUpon>MBNoConnection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBRegistroExitoso.resx">
+      <DependentUpon>MBRegistroExitoso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBRestauraContrasena.resx">
       <DependentUpon>MBRestauraContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasEmergentes\MBUsuariosPop.resx">
+      <DependentUpon>MBUsuariosPop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasEmergentes\MBVerificaCorreo.resx">
       <DependentUpon>MBVerificaCorreo.cs</DependentUpon>

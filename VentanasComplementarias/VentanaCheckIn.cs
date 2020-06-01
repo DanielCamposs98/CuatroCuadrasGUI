@@ -31,7 +31,7 @@ namespace CuatroCuadras.VentanasComplementarias
                 {
                     //Obtener nombre ciudad
                     command.Connection = connection;
-                    command.CommandText = String.Format("SELECT C.ciudad, L.nombre FROM LUGAR L JOIN Ciudad C ON C.ID_Ciudad=L.ID_Ciudad");
+                    command.CommandText = String.Format("SELECT L.nombre FROM LUGAR L ");
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
 
@@ -59,7 +59,7 @@ namespace CuatroCuadras.VentanasComplementarias
                 {
                     //Obtener nombre ciudad
                     command.Connection = connection;
-                    command.CommandText = String.Format("INSERT INTO Visita VALUES(@lugar,@nick,@comentario,@valoracion,GETDATE())'");
+                    command.CommandText = String.Format("INSERT INTO Visita VALUES(@lugar,@nick,@comentario,@valoracion,GETDATE())");
                     command.Parameters.AddWithValue("@lugar",obtenLugar());
                     command.Parameters.AddWithValue("@nick", UsuarioCache.nickname);
                     command.Parameters.AddWithValue("@comentario", txtComentario.Text);
@@ -69,6 +69,8 @@ namespace CuatroCuadras.VentanasComplementarias
                     try
                     {
                         command.ExecuteNonQuery();
+                        Hide();
+                        MessageBox.Show("Check-In Exitoso");
                     }catch(SqlException ex)
                     {
                         MessageBox.Show(ex.Message);
@@ -102,6 +104,11 @@ namespace CuatroCuadras.VentanasComplementarias
                     return id;
                 }
             }
+        }
+
+        private void VentanaCheckIn_Load(object sender, EventArgs e)
+        {
+            cmbLugares.SelectedIndex = 0;
         }
     }
 }

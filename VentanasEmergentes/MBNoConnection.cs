@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CuatroCuadras.VentanaConexionServ;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,13 @@ namespace CuatroCuadras.VentanasEmergentes
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            FormCollection formulariosApp = Application.OpenForms;
+            foreach (Form f in formulariosApp)
+            {
+                f.Hide();
+            }
+            ConexionServer cc = new ConexionServer();
+            cc.Show();
         }
     }
 }

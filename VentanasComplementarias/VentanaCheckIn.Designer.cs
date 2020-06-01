@@ -128,6 +128,8 @@
             // 
             this.txtComentario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.txtComentario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtComentario.Location = new System.Drawing.Point(176, 164);
             this.txtComentario.MaxLength = 50;
             this.txtComentario.Multiline = true;
@@ -198,7 +200,9 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VentanaCheckIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "VentanaCheckIn";
+            this.Load += new System.EventHandler(this.VentanaCheckIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUpValoracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);

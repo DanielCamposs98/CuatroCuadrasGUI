@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,15 +38,16 @@
             this.dgSugerencias = new System.Windows.Forms.DataGridView();
             this.dgSolicitudes = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.NicknameSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAcepSol = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnRechSol = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.NicknameSug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Nickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMostrarPerfil = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnAmigosComun = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.NicknameSug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.NicknameSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAceptarSol = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnRechazarSol = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgAmigos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSugerencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSolicitudes)).BeginInit();
@@ -79,7 +80,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(455, 87);
+            this.label3.Location = new System.Drawing.Point(469, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 21);
             this.label3.TabIndex = 3;
@@ -90,7 +91,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(439, 81);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(453, 81);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(10, 425);
             this.bunifuSeparator1.TabIndex = 4;
@@ -108,13 +109,15 @@
             this.Nickname,
             this.Nombre,
             this.Ciudad,
-            this.btnMostrarPerfil});
+            this.btnMostrarPerfil,
+            this.btnAmigosComun});
             this.dgAmigos.Location = new System.Drawing.Point(45, 129);
             this.dgAmigos.Name = "dgAmigos";
             this.dgAmigos.ReadOnly = true;
             this.dgAmigos.RowHeadersVisible = false;
-            this.dgAmigos.Size = new System.Drawing.Size(373, 277);
+            this.dgAmigos.Size = new System.Drawing.Size(402, 357);
             this.dgAmigos.TabIndex = 5;
+            this.dgAmigos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAmigos_CellClick);
             // 
             // dgSugerencias
             // 
@@ -126,12 +129,13 @@
             this.dgSugerencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NicknameSug,
             this.btnAgregar});
-            this.dgSugerencias.Location = new System.Drawing.Point(459, 129);
+            this.dgSugerencias.Location = new System.Drawing.Point(473, 129);
             this.dgSugerencias.Name = "dgSugerencias";
             this.dgSugerencias.ReadOnly = true;
             this.dgSugerencias.RowHeadersVisible = false;
             this.dgSugerencias.Size = new System.Drawing.Size(299, 154);
             this.dgSugerencias.TabIndex = 6;
+            this.dgSugerencias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSugerencias_CellClick);
             // 
             // dgSolicitudes
             // 
@@ -142,69 +146,26 @@
             this.dgSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSolicitudes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NicknameSol,
-            this.btnAcepSol,
-            this.btnRechSol});
-            this.dgSolicitudes.Location = new System.Drawing.Point(459, 332);
+            this.btnAceptarSol,
+            this.btnRechazarSol});
+            this.dgSolicitudes.Location = new System.Drawing.Point(473, 332);
             this.dgSolicitudes.Name = "dgSolicitudes";
             this.dgSolicitudes.ReadOnly = true;
             this.dgSolicitudes.RowHeadersVisible = false;
-            this.dgSolicitudes.Size = new System.Drawing.Size(299, 154);
+            this.dgSolicitudes.Size = new System.Drawing.Size(300, 154);
             this.dgSolicitudes.TabIndex = 8;
+            this.dgSolicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSolicitudes_CellClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(455, 290);
+            this.label4.Location = new System.Drawing.Point(469, 290);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Solicitudes";
-            // 
-            // NicknameSol
-            // 
-            this.NicknameSol.HeaderText = "Nickname";
-            this.NicknameSol.Name = "NicknameSol";
-            this.NicknameSol.ReadOnly = true;
-            // 
-            // btnAcepSol
-            // 
-            this.btnAcepSol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.btnAcepSol.DefaultCellStyle = dataGridViewCellStyle3;
-            this.btnAcepSol.HeaderText = "";
-            this.btnAcepSol.Name = "btnAcepSol";
-            this.btnAcepSol.ReadOnly = true;
-            this.btnAcepSol.Text = "Aceptar";
-            this.btnAcepSol.UseColumnTextForButtonValue = true;
-            // 
-            // btnRechSol
-            // 
-            this.btnRechSol.HeaderText = " ";
-            this.btnRechSol.Name = "btnRechSol";
-            this.btnRechSol.ReadOnly = true;
-            this.btnRechSol.Text = "Rechazar";
-            this.btnRechSol.UseColumnTextForButtonValue = true;
-            // 
-            // NicknameSug
-            // 
-            this.NicknameSug.HeaderText = "Nickname";
-            this.NicknameSug.Name = "NicknameSug";
-            this.NicknameSug.ReadOnly = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.btnAgregar.HeaderText = " ";
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.ReadOnly = true;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseColumnTextForButtonValue = true;
             // 
             // Nickname
             // 
@@ -226,12 +187,69 @@
             // 
             // btnMostrarPerfil
             // 
-            this.btnMostrarPerfil.HeaderText = " ";
+            this.btnMostrarPerfil.HeaderText = "Perfil";
             this.btnMostrarPerfil.Name = "btnMostrarPerfil";
             this.btnMostrarPerfil.ReadOnly = true;
             this.btnMostrarPerfil.Text = "Mostrar";
             this.btnMostrarPerfil.UseColumnTextForButtonValue = true;
-            this.btnMostrarPerfil.Width = 50;
+            this.btnMostrarPerfil.Width = 40;
+            // 
+            // btnAmigosComun
+            // 
+            this.btnAmigosComun.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnAmigosComun.HeaderText = " Amigos Común";
+            this.btnAmigosComun.Name = "btnAmigosComun";
+            this.btnAmigosComun.ReadOnly = true;
+            this.btnAmigosComun.Text = "Mostrar";
+            this.btnAmigosComun.UseColumnTextForButtonValue = true;
+            // 
+            // NicknameSug
+            // 
+            this.NicknameSug.HeaderText = "Nickname";
+            this.NicknameSug.Name = "NicknameSug";
+            this.NicknameSug.ReadOnly = true;
+            this.NicknameSug.Width = 200;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.btnAgregar.HeaderText = " ";
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.ReadOnly = true;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseColumnTextForButtonValue = true;
+            // 
+            // NicknameSol
+            // 
+            this.NicknameSol.HeaderText = "Nickname";
+            this.NicknameSol.Name = "NicknameSol";
+            this.NicknameSol.ReadOnly = true;
+            this.NicknameSol.Width = 150;
+            // 
+            // btnAceptarSol
+            // 
+            this.btnAceptarSol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptarSol.DefaultCellStyle = dataGridViewCellStyle2;
+            this.btnAceptarSol.HeaderText = "";
+            this.btnAceptarSol.Name = "btnAceptarSol";
+            this.btnAceptarSol.ReadOnly = true;
+            this.btnAceptarSol.Text = "Aceptar";
+            this.btnAceptarSol.UseColumnTextForButtonValue = true;
+            this.btnAceptarSol.Width = 75;
+            // 
+            // btnRechazarSol
+            // 
+            this.btnRechazarSol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnRechazarSol.HeaderText = " ";
+            this.btnRechazarSol.Name = "btnRechazarSol";
+            this.btnRechazarSol.ReadOnly = true;
+            this.btnRechazarSol.Text = "Rechazar";
+            this.btnRechazarSol.UseColumnTextForButtonValue = true;
             // 
             // VentanaAmigos
             // 
@@ -269,14 +287,15 @@
         private System.Windows.Forms.DataGridView dgSugerencias;
         private System.Windows.Forms.DataGridView dgSolicitudes;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NicknameSug;
-        private System.Windows.Forms.DataGridViewButtonColumn btnAgregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NicknameSol;
-        private System.Windows.Forms.DataGridViewButtonColumn btnAcepSol;
-        private System.Windows.Forms.DataGridViewButtonColumn btnRechSol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nickname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
         private System.Windows.Forms.DataGridViewButtonColumn btnMostrarPerfil;
+        private System.Windows.Forms.DataGridViewButtonColumn btnAmigosComun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NicknameSug;
+        private System.Windows.Forms.DataGridViewButtonColumn btnAgregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NicknameSol;
+        private System.Windows.Forms.DataGridViewButtonColumn btnAceptarSol;
+        private System.Windows.Forms.DataGridViewButtonColumn btnRechazarSol;
     }
 }
