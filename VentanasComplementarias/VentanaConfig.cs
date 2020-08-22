@@ -18,6 +18,7 @@ namespace CuatroCuadras.VentanasComplementarias
         private void VentanaConfig_Load(object sender, EventArgs e)
         {
             llenaDatosPersonales();
+            lblMsgError.Visible = true;
         }
 
         private void llenaDatosPersonales()
